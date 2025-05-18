@@ -134,3 +134,26 @@ if ( true ) {
 		console.log(second)
 	}
 }
+
+//------------------------------------------------------------------------------------
+
+// variable shadowing
+
+let myName = "Tasi"
+
+if ( true ) {
+	let myName = "Peter"
+	if ( true ){
+		let myName = "Laura"
+		console.log(myName)
+	}
+}
+
+if ( true ) {
+	console.log(myName)
+	//note Tento blok je sesterský s predošlým blokom, preto vypíše "Tasi".
+	//note Nemá prístup do sesterského bloku, kde je predefinovaný myName.
+}
+
+//------------------------------------------------------------------------------------
+
