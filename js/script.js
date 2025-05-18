@@ -113,3 +113,24 @@ if( firstName2 === "Tasi" ) {
 		//note true = false, true
 		//note true = true, false
 		//note false = false, false
+
+//------------------------------------------------------------------------------------
+
+// Scope - rozsah
+// Globálny scope (first)
+// Lokálny scope (second)
+
+let first = "Prvý text"
+
+if ( true ) {
+	console.log(first)
+	let second = "Druhý text"
+	console.log(second)
+	//note V tomto prípade je second dcérsky scope rodičovského scope (first)
+
+	if ( true ) {
+		let third = "Tretí text"
+		console.log(third)
+		console.log(second)
+	}
+}
