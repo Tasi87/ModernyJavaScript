@@ -1,0 +1,9 @@
+body {
+	background: linear-gradient(teal, darkviolet);
+	height: 100vh;
+}
+
+h1 {
+	color: #bada55;
+	text-align: center;
+}
