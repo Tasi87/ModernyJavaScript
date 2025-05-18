@@ -1,0 +1,86 @@
+// console.log("Hallo, ich heiße Tasi.");
+
+// String
+let firstName = "Tasi";
+let job = "instructor";
+console.log("Hallo, ich heiße " + firstName + " und ich arbeite als " + job + ".");
+
+// Number
+let age = 37;
+
+// Počtové operácie
+let x = age + 5;			// môžem používať aj iné matematické operácie "+", "*", "/".
+
+console.log("Volám sa " + firstName + " a mám " + age + ".");
+console.log("O päť rokov budem mať " + x + ".");
+console.log("O päť rokov budem mať " + (age + 5) + ".");
+// age = age + 5;
+// console.log("O päť rokov budem mať " + (age + 5) + ".");
+
+// Premeny sa nesmú definovať viackrát ako raz
+	//!	let age = 20;
+	//!	let age = 30;
+	//note	Takto predefinovať premenu môžem
+	//!	let age = 20;
+	//!	age = 30;
+
+//	Názvy premenných
+	//!	Nikdy by nemali začínať číslom ani špeciálne znaky nepoužívať!
+	//		let 5m = 3	//! 		NEMÔŽE
+			let m5 = 3;	//NOTE	MÔŽE
+			console.log(m5);
+
+// Žadne rezervované slová
+	//! napr.: let if = 5;
+
+//------------------------------------------------------------------------------------
+
+// String
+let firstName1 = "Tasi";
+
+// Number
+let age1 = 21;
+
+// Boolean (true / false)
+let adult = age >= 18
+console.log(adult);
+
+// Boolean - operátory
+let result = age <= 10;
+
+//note === rovná sa
+//note !== nerovná sa
+//note < menší (<=)
+//note > väčší (>=)
+
+//------------------------------------------------------------------------------------
+
+// Podmienky if a else
+
+let age2 = 10
+if(age2 >= 18) {
+	console.log("Si dospleý")
+} else {
+	console.log("Si dieťa")
+}
+		// Spôsob zapísania bez else
+
+		// if(age2 >= 18) {
+		// 	console.log("Si dospleý")
+		// }
+		// if(age2 < 18) {
+		// 	console.log("Si dieťa")
+		// }
+
+//------------------------------------------------------------------------------------
+
+let firstName2 = "Peter"
+
+if( firstName2 === "Tasi" ) {
+	console.log("Ahoj Tasi")
+} else {
+	console.log("Ahoj " + firstName2)
+}
+
+//------------------------------------------------------------------------------------
+
