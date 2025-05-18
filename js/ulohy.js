@@ -62,3 +62,28 @@ if ( position === "Programátor" ) {
 } else {
 	console.log("Tuto pozíciu neponúkame.")
 }
+
+//------------------------------------------------------------------------------------------
+
+let temperature = 26
+if ( temperature <= 10 ) {
+	console.log("chladno")
+} else if ( temperature >= 11 && temperature <= 25 ) {
+	console.log("teplo")
+} else if ( temperature >=26 ) {
+		console.log("horúco")
+	}
+	//alebo else {
+	//	console.log("horúco")
+	//} pri tomto zápise je menej písania
+
+//------------------------------------------------------------------------------------------
+
+let weight = 100
+let height = 190
+
+if ( weight >= 100 || height >= 190 ) {
+	console.log("podozrivý")
+} else {
+	console.log("nie je podozrivý")
+}
