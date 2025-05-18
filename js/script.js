@@ -84,3 +84,32 @@ if( firstName2 === "Tasi" ) {
 
 //------------------------------------------------------------------------------------
 
+// Logické operátory
+
+	// a zároveň - &&
+	let firstName3 = "Tasi"
+	let height = 181
+
+	if ( firstName3 === "Tasi" && height === 181 ) {
+		console.log("Ja to on!")
+	} else {
+		console.log("Nie je to on.")
+	}
+
+		//note true = true, true
+		//note false = false, true
+		//note false = true, false
+		//note false = false, false
+
+	// alebo ||
+
+	if ( firstName3 === "Tasi" || height === 181 ) {
+		console.log("Našiel sa.")
+	} else {
+		console.log("Nenašiel sa.")
+	}
+
+		//note true = true, true
+		//note true = false, true
+		//note true = true, false
+		//note false = false, false
