@@ -87,3 +87,21 @@ if ( weight >= 100 || height >= 190 ) {
 } else {
 	console.log("nie je podozrivý")
 }
+
+//------------------------------------------------------------------------------------------
+
+//function naDruhu (num) {
+//	console.log(num * num)
+//}
+
+let naDruhu = (num) => console.log(num * num) 
+
+naDruhu(3)
+
+// function zdraviacaFunkcia(name) {
+// 	console.log("Ahoj, ja som " + name)
+// }
+
+let zdraviacaFunkcia = (name) => console.log("Ahoj, ja som " + name)
+
+zdraviacaFunkcia("Tasi")
