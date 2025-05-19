@@ -91,17 +91,48 @@ if ( weight >= 100 || height >= 190 ) {
 //------------------------------------------------------------------------------------------
 
 //function naDruhu (num) {
-//	console.log(num * num)
-//}
+	//	console.log(num * num)
+	//}
+	
+	let naDruhu = (num) => console.log(num * num) 
+	
+	naDruhu(3)
+	
+	// function zdraviacaFunkcia(name) {
+		// 	console.log("Ahoj, ja som " + name)
+		// }
+		
+		let zdraviacaFunkcia = (name) => console.log("Ahoj, ja som " + name)
+		
+		zdraviacaFunkcia("Tasi")
+		
+//------------------------------------------------------------------------------------------
+/*
+1)	Vytvorte funkciu adultChecker, do ktorej zadáme parameter vek a pokiaľ bude 
+vek väčší alebo rovný 18, tak sa vráti ako výsledok slovo "dospelý" a pokiaľ
+nie, tak sa vráti slovo "dieťa".
+2)	Následne pomocou ďaľšej podmienky if vypíšte do konzoly text, že pokiaľ je dospelý,
+tak "Výsledok kontroly veku: dospelý" a pod to na ďaľší riadok "Môžeš vstúpiť.".
+Pokiaľ sa bude jednať o dieťa, tak sa vypíše "Výsledok veku: dieťa" a na ďaľší riadok
+"Nemôžes vstúpiť.".
+*/
 
-let naDruhu = (num) => console.log(num * num) 
+function adultChecker(age) {
+	if (age >= 18){
+		let result = "dospelý"
+		return result
+	} else  {
+		let result = "dieťa"
+		return result
+	}
+}
 
-naDruhu(3)
+let value = adultChecker(18)
 
-// function zdraviacaFunkcia(name) {
-// 	console.log("Ahoj, ja som " + name)
-// }
-
-let zdraviacaFunkcia = (name) => console.log("Ahoj, ja som " + name)
-
-zdraviacaFunkcia("Tasi")
+if (value === "dospelý") {
+	console.log("Výsledok kontroly veku: " + value)
+	console.log("Môžeš vstúpiť.")
+} else {
+	console.log("Výsledok kontorly veku " + value)
+	console.log("Nemôžeš vstúpiť.")
+}
