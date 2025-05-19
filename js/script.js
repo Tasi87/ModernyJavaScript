@@ -157,3 +157,44 @@ if ( true ) {
 
 //------------------------------------------------------------------------------------
 
+// Funkcie
+
+function pozdrav1 () {
+	console.log("Toto je pozdrav 1!")
+}
+
+pozdrav1()
+
+let pozdrav2 = function () {
+	console.log("Toto je pozdrav 2!")
+}
+
+pozdrav2()
+
+// Šípkový zápis
+let pozdrav3 = () => console.log("Toto je pozdrav 3!")
+
+pozdrav3()
+
+//------------------------------------------------------------------------------------
+
+// Funkcie - parameter a argument
+
+// Parametre
+function naDruhu (num) {
+	console.log(num * num)
+}
+
+// Argumenty
+naDruhu(3)
+naDruhu(24)
+naDruhu(10)
+
+function zdraviacaFunkcia(name) {
+	console.log("Ahoj, ja som " + name)
+}
+
+zdraviacaFunkcia("Tasi")
+
+//------------------------------------------------------------------------------------
+
