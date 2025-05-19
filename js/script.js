@@ -182,13 +182,11 @@ pozdrav3()
 
 // Parametre
 function naDruhu (num) {
-	console.log(num * num)
+	console.log(num * num) // (number * number)
 }
 
 // Argumenty
 naDruhu(3)
-naDruhu(24)
-naDruhu(10)
 
 function zdraviacaFunkcia(name) {
 	console.log("Ahoj, ja som " + name)
@@ -198,3 +196,21 @@ zdraviacaFunkcia("Tasi")
 
 //------------------------------------------------------------------------------------
 
+function nasobenie(num) {
+	let result = num * num
+	return result
+}
+//note "return" vracia výsledok funkcie aby sa s výsledkom dalo ďalej pracovať
+//! Výsledok funkcie MUSÍM uložiť aby som s ním mohol ďalej pracovať!
+
+let value1 = nasobenie(5)
+value1 = value1 + 50
+console.log(value1)
+
+function zvysovaciaFunkcia(num) {
+	let result = num + 100
+	return result
+}
+
+let value2 = zvysovaciaFunkcia (7)
+console.log(value2)
