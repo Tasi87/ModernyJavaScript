@@ -107,7 +107,7 @@ if ( weight >= 100 || height >= 190 ) {
 		zdraviacaFunkcia("Tasi")
 		
 //------------------------------------------------------------------------------------------
-/*
+/**
 1)	Vytvorte funkciu adultChecker, do ktorej zadáme parameter vek a pokiaľ bude 
 vek väčší alebo rovný 18, tak sa vráti ako výsledok slovo "dospelý" a pokiaľ
 nie, tak sa vráti slovo "dieťa".
@@ -139,7 +139,7 @@ if (value === "dospelý") {
 
 //------------------------------------------------------------------------------------------
 
-/*
+/**
 Na dverách do kancelárie je tlačítkový display. Aby sa otvorili dvere, tak musíte zadať správny 3-miestny kód. Tento kód ste si navolili, ked ste nastupovali do práce. Uložte vami zvolený kód do troch premenných. Potom vytvorte funkciu, ktorá bude príjmať 3 parametre. Pokiaľ sa bude zhodovať so zvoleným kódom, tak sa do konzole vypíše "Môžete vstúpiť". Pokiaľ sa nebude zhodovať, tak sa vypíše "Zlé zadaný kód. Skúste to prosím znovu."
 */
 
@@ -158,3 +158,30 @@ function code(a, b, c) {
 code(5, 3, 9)
 code(4, 3, 8)
 code(5, 3, 8)
+
+//------------------------------------------------------------------------------------------
+
+let firstName1 = "Harry"
+let lastName1 = "Potter"
+let age1 = 15
+let firstFriend1 = "Ron"
+let secondFriend1 = "Hermiona"
+
+/**
+Úloha je vypísať vetu "Ahoj, volám sa Harry Potter a mám 15 rokov. Moji priatelia sú Hermiona a Ron." pomocou Template strings
+*/
+
+console.log(`Ahoj volám sa ${firstName1} ${lastName1} a mám ${age1} rokov. Moji priatelia sú ${secondFriend1} a ${firstFriend1}.`)
+
+let movie = "Ospalá diera"
+let director = "Tim Burton"
+let award = "najlepší výkon vo výprave"
+
+/**
+Z troch vyššie uvedených premenných zostavte pomocou template strings vetu "Videl som film Ospalá diera, ktorý režíroval Tim Burton. Tento film získal ocenenie najlepší výkon vo výprave."
+*/
+
+console.log(`Videl som film ${movie}, ktorý režíroval ${director}. Tento film získal ocenenie ${award}.`)
+
+//------------------------------------------------------------------------------------------
+
