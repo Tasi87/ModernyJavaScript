@@ -192,21 +192,24 @@ Do konzole vypíšte vety "Volám sa ... . Mám ... rokov a pochádzam z mesta .
 */
 
 let person1 = {
-		name: "Tasi",
-		age: 38,
-		city: "Bratislava"
+	name: "Tasi",
+	age: 38,
+	city: "Bratislava",
+	gender: "male"
 }
 
 let person2 = {
-		name: "Bleee",
-		age: 756,
-		city: "Kolorádo"
+	name: "Sara",
+	age: 25,
+	city: "Velký Slavkov",
+	gender: "female"
 }
 
 let person3 = {
-		name: "Ehmmm",
-		age: 54,
-		city: "Hmmm"
+	name: "Laura",
+	age: 2,
+	city: "Bratislava",
+	gender: "female"
 }
 
 console.log(`
@@ -221,10 +224,18 @@ console.log(`
 Vezmite 3 objekty z predošlej úlohy a vypíšte ich pomocou funkcie.
 */
 
+// Objekty s funkciami rozšírené o podmienky
+
 function personInfo(person) {
-	console.log(`
-		Volám sa ${person.name}. Mám ${person.age} rokov a pochádzam z mesta ${person.city}.
-		`)
+	if ( person.gender === "male" ) {
+		console.log(`
+			Volá sa ${person.name}. On má ${person.age} rokov a pochádzam z mesta ${person.city}.
+			`)
+	} else {
+		console.log(`
+			Volá sa ${person.name}. Ona má ${person.age} rokov a pochádzam z mesta ${person.city}.
+			`)
+	}
 }
 
 personInfo(person1)
@@ -232,7 +243,40 @@ personInfo(person2)
 personInfo(person3)
 
 //------------------------------------------------------------------------------------------
+/**
+Vytvorte objekt s názvom school. Tá bude mať vlastnosti:
+type:
+street:
+city:
+capacity:
 
+Vypíšte type a city do konzoly.
+Budete mať dve metódy s názvom "open" a "closed". Open bude vypisovať text "Škola je otvorená".
+Closed bude vracať text "Škola je zatvorená" a to uložíte do ľubovolnej premennej a vypíšete do konzole.
+*/
+
+let school = {
+	type: "Stredná priemyselná škola chemická",
+	street: "Račianska 78",
+	city: "Bratislava",
+	capacity: 500,
+	open: function () {
+		console.log("Škola je otvorená.")	//! TOTO JE VYPÍSANIE
+	},
+	closed: function () {
+		return "Škola je zatvorená."			//! TOTO JE VRACANIE
+	}
+}
+
+console.log(school.type, school.city)
+//-----------------------------------
+school.open()
+//-----------------------------------
+let result3 = school.closed()
+console.log(result3)
 
 //------------------------------------------------------------------------------------------
-
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
