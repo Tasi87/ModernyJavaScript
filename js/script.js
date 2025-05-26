@@ -366,6 +366,44 @@
 
 //------------------------------------------------------------------------------------
 
+// Objekty s funkciami rozšírené o podmienky
+
+	let person1 = {
+		name: "Tasi",
+		age: 38,
+		city: "Bratislava",
+		gender: "male"
+	}
+
+	let person2 = {
+		name: "Sara",
+		age: 25,
+		city: "Velký Slavkov",
+		gender: "female"
+	}
+
+	let person3 = {
+		name: "Laura",
+		age: 2,
+		city: "Bratislava",
+		gender: "female"
+	}
+
+	function personInfo(person) {
+		if ( person.gender === "male" ) {
+			console.log(`
+				Volá sa ${person.name}. On má ${person.age} rokov a pochádzam z mesta ${person.city}.
+				`)
+		} else {
+			console.log(`
+				Volá sa ${person.name}. Ona má ${person.age} rokov a pochádzam z mesta ${person.city}.
+				`)
+		}
+	}
+
+	personInfo(person1)
+	personInfo(person2)
+	personInfo(person3)
 
 //------------------------------------------------------------------------------------
 
