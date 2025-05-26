@@ -1,21 +1,21 @@
 // console.log("Hallo, ich heiße Tasi.");
 
 // String
-let firstName = "Tasi";
-let job = "instructor";
-console.log("Hallo, ich heiße " + firstName + " und ich arbeite als " + job + ".");
+	let firstName = "Tasi";
+	let job = "instructor";
+	console.log("Hallo, ich heiße " + firstName + " und ich arbeite als " + job + ".");
 
 // Number
-let age = 37;
+	let age = 37;
 
 // Počtové operácie
-let x = age + 5;			// môžem používať aj iné matematické operácie "+", "*", "/".
+	let x = age + 5;			// môžem používať aj iné matematické operácie "+", "*", "/".
 
-console.log("Volám sa " + firstName + " a mám " + age + ".");
-console.log("O päť rokov budem mať " + x + ".");
-console.log("O päť rokov budem mať " + (age + 5) + ".");
-// age = age + 5;
-// console.log("O päť rokov budem mať " + (age + 5) + ".");
+	console.log("Volám sa " + firstName + " a mám " + age + ".");
+	console.log("O päť rokov budem mať " + x + ".");
+	console.log("O päť rokov budem mať " + (age + 5) + ".");
+	// age = age + 5;
+	// console.log("O päť rokov budem mať " + (age + 5) + ".");
 
 // Premeny sa nesmú definovať viackrát ako raz
 	//!	let age = 20;
@@ -36,51 +36,51 @@ console.log("O päť rokov budem mať " + (age + 5) + ".");
 //------------------------------------------------------------------------------------
 
 // String
-let firstName1 = "Tasi";
+	let firstName1 = "Tasi";
 
 // Number
-let age1 = 21;
+	let age1 = 21;
 
 // Boolean (true / false)
-let adult = age >= 18
-console.log(adult);
+	let adult = age >= 18
+	console.log(adult);
 
 // Boolean - operátory
-let result = age <= 10;
+	let result = age <= 10;
 
-//note === rovná sa
-//note !== nerovná sa
-//note < menší (<=)
-//note > väčší (>=)
+	//note === rovná sa
+	//note !== nerovná sa
+	//note < menší (<=)
+	//note > väčší (>=)
 
 //------------------------------------------------------------------------------------
 
 // Podmienky if a else
 
-let age2 = 10
-if(age2 >= 18) {
-	console.log("Si dospleý")
-} else {
-	console.log("Si dieťa")
-}
-		// Spôsob zapísania bez else
+	let age2 = 10
+	if(age2 >= 18) {
+		console.log("Si dospleý")
+	} else {
+		console.log("Si dieťa")
+	}
+			// Spôsob zapísania bez else
 
-		// if(age2 >= 18) {
-		// 	console.log("Si dospleý")
-		// }
-		// if(age2 < 18) {
-		// 	console.log("Si dieťa")
-		// }
+			// if(age2 >= 18) {
+			// 	console.log("Si dospleý")
+			// }
+			// if(age2 < 18) {
+			// 	console.log("Si dieťa")
+			// }
 
 //------------------------------------------------------------------------------------
 
-let firstName2 = "Peter"
+	let firstName2 = "Peter"
 
-if( firstName2 === "Tasi" ) {
-	console.log("Ahoj Tasi")
-} else {
-	console.log("Ahoj " + firstName2)
-}
+	if( firstName2 === "Tasi" ) {
+		console.log("Ahoj Tasi")
+	} else {
+		console.log("Ahoj " + firstName2)
+	}
 
 //------------------------------------------------------------------------------------
 
@@ -117,205 +117,205 @@ if( firstName2 === "Tasi" ) {
 //------------------------------------------------------------------------------------
 
 // Scope - rozsah
-// Globálny scope (first)
-// Lokálny scope (second)
+	// Globálny scope (first)
+	// Lokálny scope (second)
 
-let first = "Prvý text"
-
-if ( true ) {
-	console.log(first)
-	let second = "Druhý text"
-	console.log(second)
-	//note V tomto prípade je second dcérsky scope rodičovského scope (first)
+	let first = "Prvý text"
 
 	if ( true ) {
-		let third = "Tretí text"
-		console.log(third)
+		console.log(first)
+		let second = "Druhý text"
 		console.log(second)
+		//note V tomto prípade je second dcérsky scope rodičovského scope (first)
+
+		if ( true ) {
+			let third = "Tretí text"
+			console.log(third)
+			console.log(second)
+		}
 	}
-}
 
 //------------------------------------------------------------------------------------
 
-// variable shadowing
+// Variable shadowing
 
-let myName = "Tasi"
+	let myName = "Tasi"
 
-if ( true ) {
-	let myName = "Peter"
-	if ( true ){
-		let myName = "Laura"
-		console.log(myName)
+	if ( true ) {
+		let myName = "Peter"
+		if ( true ){
+			let myName = "Laura"
+			console.log(myName)
+		}
 	}
-}
 
-if ( true ) {
-	console.log(myName)
-	//note Tento blok je sesterský s predošlým blokom, preto vypíše "Tasi".
-	//note Nemá prístup do sesterského bloku, kde je predefinovaný myName.
-}
+	if ( true ) {
+		console.log(myName)
+		//note Tento blok je sesterský s predošlým blokom, preto vypíše "Tasi".
+		//note Nemá prístup do sesterského bloku, kde je predefinovaný myName.
+	}
 
 //------------------------------------------------------------------------------------
 
 // Funkcie
 
-function pozdrav1 () {
-	console.log("Toto je pozdrav 1!")
-}
+	function pozdrav1 () {
+		console.log("Toto je pozdrav 1!")
+	}
 
-pozdrav1()
+	pozdrav1()
 
-let pozdrav2 = function () {
-	console.log("Toto je pozdrav 2!")
-}
+	let pozdrav2 = function () {
+		console.log("Toto je pozdrav 2!")
+	}
 
-pozdrav2()
+	pozdrav2()
 
-// Šípkový zápis
-let pozdrav3 = () => console.log("Toto je pozdrav 3!")
+	// Šípkový zápis
+	let pozdrav3 = () => console.log("Toto je pozdrav 3!")
 
-pozdrav3()
+	pozdrav3()
 
 //------------------------------------------------------------------------------------
 
 // Funkcie - parameter a argument
 
-// Parametre
-function naDruhu (num) {
-	console.log(num * num) // (number * number)
-}
+	// Parametre
+	function naDruhu (num) {
+		console.log(num * num) // (number * number)
+	}
 
-// Argumenty
-naDruhu(3)
+	// Argumenty
+	naDruhu(3)
 
-function zdraviacaFunkcia(name) {
-	console.log("Ahoj, ja som " + name)
-}
+	function zdraviacaFunkcia(name) {
+		console.log("Ahoj, ja som " + name)
+	}
 
-zdraviacaFunkcia("Tasi")
+	zdraviacaFunkcia("Tasi")
 
 //------------------------------------------------------------------------------------
 
-function nasobenie(num) {
-	let result = num * num
-	return result
-}
-//note "return" vracia výsledok funkcie aby sa s výsledkom dalo ďalej pracovať
-//! Výsledok funkcie MUSÍM uložiť aby som s ním mohol ďalej pracovať!
+	function nasobenie(num) {
+		let result = num * num
+		return result
+	}
+	//note "return" vracia výsledok funkcie aby sa s výsledkom dalo ďalej pracovať
+	//! Výsledok funkcie MUSÍM uložiť aby som s ním mohol ďalej pracovať!
 
-let value1 = nasobenie(5)
-value1 = value1 + 50
-console.log(value1)
+	let value1 = nasobenie(5)
+	value1 = value1 + 50
+	console.log(value1)
 
-function zvysovaciaFunkcia(num) {
-	let result = num + 100
-	return result
-}
+	function zvysovaciaFunkcia(num) {
+		let result = num + 100
+		return result
+	}
 
-let value2 = zvysovaciaFunkcia (7)
-console.log(value2)
+	let value2 = zvysovaciaFunkcia (7)
+	console.log(value2)
 
 //------------------------------------------------------------------------------------
 
 // undefined a null
-//note "undefined" je hláska JS
-//note "null" je definované programátorom
+	//note "undefined" je hláska JS
+	//note "null" je definované programátorom
 
-// undefined v premennej
-let age3
+	// undefined v premennej
+	let age3
 
-if( age3 === undefined ) {
-	console.log("Prosím vypľnte vek.")
-} else {
-	console.log(age3)
-}
+	if( age3 === undefined ) {
+		console.log("Prosím vypľnte vek.")
+	} else {
+		console.log(age3)
+	}
 
-// undefined ako argument fukcie
-let mojaFunkcia = function( num ) {
-	console.log(num)
-}
+	// undefined ako argument fukcie
+	let mojaFunkcia = function( num ) {
+		console.log(num)
+	}
 
-mojaFunkcia()
+	mojaFunkcia()
 
-// undefined v return
+	// undefined v return
 
-let mojaFunkcia2 = function ( num ) {
-	return num
-}
+	let mojaFunkcia2 = function ( num ) {
+		return num
+	}
 
-let value = mojaFunkcia2()
-console.log(value)
+	let value = mojaFunkcia2()
+	console.log(value)
 
-// null ako priradená hodnota
-let myAge = 30
-myAge = null
-console.log(myAge)
+	// null ako priradená hodnota
+	let myAge = 30
+	myAge = null
+	console.log(myAge)
 
 //------------------------------------------------------------------------------------
 
-// Funkcia s viacero parametrami
-function sucet(a, b, c) {
-	return a + b + c
-}
+	// Funkcia s viacero parametrami
+	function sucet(a, b, c) {
+		return a + b + c
+	}
 
-let value4 =  sucet(5, 30, 3)
-console.log(value4)
+	let value4 =  sucet(5, 30, 3)
+	console.log(value4)
 
-// Defaultna (východzia) hodnota
-function game(name = "Anonym", score = 0) {
-	return "Meno: " + name + ", Score: " + score
-}
+	// Defaultna (východzia) hodnota
+	function game(name = "Anonym", score = 0) {
+		return "Meno: " + name + ", Score: " + score
+	}
 
-// game()
-//note pokiaľ definujem hodnoty "game("Tasi" ,21)", tak sa mi vypíše do konzoly "Tasi", "21".
-// game(undefined, 50)
-//note pokiaľ by som zavola funkciu "game(50)", tak by mi 50 bralo ako meno aby som toto zmenil, tak musím zadať do funkcie namiesto mena "undefined".
-let value5 = game()
-console.log(value5)
+	// game()
+	//note pokiaľ definujem hodnoty "game("Tasi" ,21)", tak sa mi vypíše do konzoly "Tasi", "21".
+	// game(undefined, 50)
+	//note pokiaľ by som zavola funkciu "game(50)", tak by mi 50 bralo ako meno aby som toto zmenil, tak musím zadať do funkcie namiesto mena "undefined".
+	let value5 = game()
+	console.log(value5)
 
 //------------------------------------------------------------------------------------
 
 // Funkcie Globálne a lokálne scope funkcie
 
-//note Globálny scope môžem používať kdekoľvek globálne a aj v Lokálnych scopoch.
-//note Lokálny scope (a, b, c) môžem použiť iba v Lokálnom "podscope" (myName2), ale nie v Globálnom scope. Používanie scopov funguje z hora dole, nie nopak (potomka nemôžem použiť v rodičovi, ale rodiča môžem použiť v potomkovi).
+	//note Globálny scope môžem používať kdekoľvek globálne a aj v Lokálnych scopoch.
+	//note Lokálny scope (a, b, c) môžem použiť iba v Lokálnom "podscope" (myName2), ale nie v Globálnom scope. Používanie scopov funguje z hora dole, nie nopak (potomka nemôžem použiť v rodičovi, ale rodiča môžem použiť v potomkovi).
 
-// Globálny scope (num1, num2, num3)
-// Lokálny scope (a, b, c)
-// Lokálny scope (myName2)
+	// Globálny scope (num1, num2, num3)
+	// Lokálny scope (a, b, c)
+	// Lokálny scope (myName2)
 
-let num1 = 5
-let num2 = 3
-let num3 = 8
+	let num1 = 5
+	let num2 = 3
+	let num3 = 8
 
-function code(a, b, c) {
-	// console.log(myName2)
-	if ( a === num1 && b === num2 && c === num3 ) {
-		console.log("Môžeš vstúpiť.")
-		let myName2
-	} else {
-		console.log("Zlé zadaný kód. Skúste to prosím znovu.")
+	function code(a, b, c) {
+		// console.log(myName2)
+		if ( a === num1 && b === num2 && c === num3 ) {
+			console.log("Môžeš vstúpiť.")
+			let myName2
+		} else {
+			console.log("Zlé zadaný kód. Skúste to prosím znovu.")
+		}
 	}
-}
 
-code(5, 3, 8)
+	code(5, 3, 8)
 
 //------------------------------------------------------------------------------------
 
 // Template strings
 
-let myName3 = "Hanry Proper"
-let age4 = 15
-console.log("Ahoj ja som " + myName3 + " a mám " + age4 + " rokov.")
-console.log("Ahoj ja som", myName3,"a mám",age4,"rokov.")
-//note Toto je Template strings
-console.log(`Ahoj, ja som ${myName3} a mám ${age4} rokov.`)
+	let myName3 = "Hanry Proper"
+	let age4 = 15
+	console.log("Ahoj ja som " + myName3 + " a mám " + age4 + " rokov.")
+	console.log("Ahoj ja som", myName3,"a mám",age4,"rokov.")
+	//note Toto je Template strings
+	console.log(`Ahoj, ja som ${myName3} a mám ${age4} rokov.`)
 
-function pozdrav(firstName, lastName) {
-	console.log(`Ahoj, moje meno je ${firstName} a priezvisko je ${lastName}`)
-}
+	function pozdrav(firstName, lastName) {
+		console.log(`Ahoj, moje meno je ${firstName} a priezvisko je ${lastName}`)
+	}
 
-pozdrav("Jožko", "Mrkvička")
+	pozdrav("Jožko", "Mrkvička")
 
 //------------------------------------------------------------------------------------
 
@@ -343,3 +343,29 @@ pozdrav("Jožko", "Mrkvička")
 	console.log(`${myBook.title} je kniha od autorky ${myBook.author} a bola vydaná v roku ${myBook.published}.`)
 	
 //------------------------------------------------------------------------------------
+
+// Vypisovanie objektov pomocou funkcie
+	let firstBook = {
+		title: "Harry Potter a kameň mudrcov",
+		author: "J. K. Rowlingová",
+		published: 1997
+	}
+	
+	let secondBook = {
+		title: "Harry Potter a Tajomná komnata",
+		author: "J. K. Rowlingová",
+		published: 1998
+	}
+
+	function resultBook(book) {
+		console.log(`Kniha od ${book.author} z roku ${book.published} sa volá ${book.title}.`)
+	}
+
+	resultBook(firstBook)
+	resultBook(secondBook)
+
+//------------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------------
+
