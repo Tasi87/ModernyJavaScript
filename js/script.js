@@ -275,3 +275,27 @@ console.log(value5)
 
 //------------------------------------------------------------------------------------
 
+// Funkcie Globálne a lokálne scope funkcie
+
+//note Globálny scope môžem používať kdekoľvek globálne a aj v Lokálnych scopoch.
+//note Lokálny scope (a, b, c) môžem použiť iba v Lokálnom "podscope" (myName2), ale nie v Globálnom scope. Používanie scopov funguje z hora dole, nie nopak (potomka nemôžem použiť v rodičovi, ale rodiča môžem použiť v potomkovi).
+
+// Globálny scope (num1, num2, num3)
+// Lokálny scope (a, b, c)
+// Lokálny scope (myName2)
+
+let num1 = 5
+let num2 = 3
+let num3 = 8
+
+function code(a, b, c) {
+	console.log(myName2)
+	if ( a === num1 && b === num2 && c === num3 ) {
+		console.log("Môžeš vstúpiť.")
+		let myName2
+	} else {
+		console.log("Zlé zadaný kód. Skúste to prosím znovu.")
+	}
+}
+
+code(5, 3, 8)
