@@ -214,3 +214,39 @@ function zvysovaciaFunkcia(num) {
 
 let value2 = zvysovaciaFunkcia (7)
 console.log(value2)
+
+//------------------------------------------------------------------------------------
+
+// undefined a null
+	//note "undefined" je hláska JS
+	//note "null" je definované programátorom
+
+	// undefined v premennej
+	let age3
+
+	if( age3 === undefined ) {
+		console.log("Prosím vypľnte vek.")
+	} else {
+		console.log(age3)
+	}
+
+	// undefined ako argument fukcie
+	let mojaFunkcia = function( num ) {
+		console.log(num)
+	}
+
+	mojaFunkcia()
+
+	// undefined v return
+
+	let mojaFunkcia2 = function ( num ) {
+		return num
+	}
+
+	let value = mojaFunkcia2()
+	console.log(value)
+
+	// null ako priradená hodnota
+	let myAge = 30
+	myAge = null
+	console.log(myAge)
