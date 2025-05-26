@@ -319,3 +319,27 @@ pozdrav("Jožko", "Mrkvička")
 
 //------------------------------------------------------------------------------------
 
+// Objekty
+
+	let myBook = {
+		title: "Harry Potter a kameň mudrcov",
+		author: "J. K. Rowlingová",
+		published: 1997
+	}
+
+	// výpis jednotlivých vlastností
+	console.log(myBook.title) //note "myBook.title" je bodková notácia
+	console.log(myBook.author)
+	console.log(myBook.published)
+	
+	// výpis všetkých vlastností naraz
+	console.log(myBook)
+	console.log(`${myBook.title} je kniha od autorky ${myBook.author} a bola vydaná v roku ${myBook.published}.`)
+
+	// zmena vlastností objektu
+	myBook.title = "Harry Potter a Tajomná komnata"
+	myBook.published = 1998
+
+	console.log(`${myBook.title} je kniha od autorky ${myBook.author} a bola vydaná v roku ${myBook.published}.`)
+	
+//------------------------------------------------------------------------------------
