@@ -366,44 +366,54 @@
 
 //------------------------------------------------------------------------------------
 
-// Objekty s funkciami rozšírené o podmienky
-
-	let person1 = {
-		name: "Tasi",
-		age: 38,
-		city: "Bratislava",
-		gender: "male"
-	}
-
-	let person2 = {
-		name: "Sara",
-		age: 25,
-		city: "Velký Slavkov",
-		gender: "female"
-	}
-
-	let person3 = {
-		name: "Laura",
-		age: 2,
-		city: "Bratislava",
-		gender: "female"
-	}
-
-	function personInfo(person) {
-		if ( person.gender === "male" ) {
-			console.log(`
-				Volá sa ${person.name}. On má ${person.age} rokov a pochádzam z mesta ${person.city}.
-				`)
-		} else {
-			console.log(`
-				Volá sa ${person.name}. Ona má ${person.age} rokov a pochádzam z mesta ${person.city}.
-				`)
+// Objekty a return
+	
+	function bookInfo(book) {
+		return {
+			basicInfo: `${book.title} od ${book.author}`,
+			publishing: `Kniha ${book.title} bola vydaná v roku ${book.published}.`
 		}
 	}
 
-	personInfo(person1)
-	personInfo(person2)
-	personInfo(person3)
+	let result2 = bookInfo(firstBook)
+	console.log(result2)
+	//note môžem vypísať všetko alebo len to čo chcem, viď nižšie
+	// console.log(result2.basicInfo)
+	// console.log(result2.publishing)
+
+//------------------------------------------------------------------------------------
+
+// Objekty a ich metódy
+	// Metódy
+	//note Metóda je funkcia priradená nejakému objektu.
+	let person1 = {
+		firstName: "Jožko",
+		lastName: "Mrkvička",
+		age: 21,
+		height: 181,
+		salary: 5000,
+		greet: function (friends/** toto je PARAMETER */) {
+			console.log(`
+				Ahoj, mám ${friends} priateľov.
+				`)
+		},
+		toWork: function (job) {
+			return "Idem do svojej práce čo je " + job
+		}
+	}
+
+	console.log(person1.firstName)
+	console.log(person1.height)
+	person1.greet(5/** toto je ARGUMENT */)
+	let result3 = person1.toWork("programátor") 
+	//! odtialťo sa to vracia vďaka return a ukladá sa to do result3
+	console.log(result3)
+	//! toto to až vypíše
+
+
+//------------------------------------------------------------------------------------
+
+
 
 //------------------------------------------------------------------------------------
 
