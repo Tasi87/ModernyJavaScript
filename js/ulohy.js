@@ -217,3 +217,22 @@ console.log(`
 
 //------------------------------------------------------------------------------------------
 
+/**
+Vezmite 3 objekty z predošlej úlohy a vypíšte ich pomocou funkcie.
+*/
+
+function personInfo(person) {
+	console.log(`
+		Volám sa ${person.name}. Mám ${person.age} rokov a pochádzam z mesta ${person.city}.
+		`)
+}
+
+personInfo(person1)
+personInfo(person2)
+personInfo(person3)
+
+//------------------------------------------------------------------------------------------
+
+
+//------------------------------------------------------------------------------------------
+
