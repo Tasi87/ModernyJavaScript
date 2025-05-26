@@ -289,7 +289,7 @@ let num2 = 3
 let num3 = 8
 
 function code(a, b, c) {
-	console.log(myName2)
+	// console.log(myName2)
 	if ( a === num1 && b === num2 && c === num3 ) {
 		console.log("Môžeš vstúpiť.")
 		let myName2
@@ -299,3 +299,23 @@ function code(a, b, c) {
 }
 
 code(5, 3, 8)
+
+//------------------------------------------------------------------------------------
+
+// Template strings
+
+let myName3 = "Hanry Proper"
+let age4 = 15
+console.log("Ahoj ja som " + myName3 + " a mám " + age4 + " rokov.")
+console.log("Ahoj ja som", myName3,"a mám",age4,"rokov.")
+//note Toto je Template strings
+console.log(`Ahoj, ja som ${myName3} a mám ${age4} rokov.`)
+
+function pozdrav(firstName, lastName) {
+	console.log(`Ahoj, moje meno je ${firstName} a priezvisko je ${lastName}`)
+}
+
+pozdrav("Jožko", "Mrkvička")
+
+//------------------------------------------------------------------------------------
+
