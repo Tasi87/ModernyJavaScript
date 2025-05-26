@@ -218,35 +218,60 @@ console.log(value2)
 //------------------------------------------------------------------------------------
 
 // undefined a null
-	//note "undefined" je hláska JS
-	//note "null" je definované programátorom
+//note "undefined" je hláska JS
+//note "null" je definované programátorom
 
-	// undefined v premennej
-	let age3
+// undefined v premennej
+let age3
 
-	if( age3 === undefined ) {
-		console.log("Prosím vypľnte vek.")
-	} else {
-		console.log(age3)
-	}
+if( age3 === undefined ) {
+	console.log("Prosím vypľnte vek.")
+} else {
+	console.log(age3)
+}
 
-	// undefined ako argument fukcie
-	let mojaFunkcia = function( num ) {
-		console.log(num)
-	}
+// undefined ako argument fukcie
+let mojaFunkcia = function( num ) {
+	console.log(num)
+}
 
-	mojaFunkcia()
+mojaFunkcia()
 
-	// undefined v return
+// undefined v return
 
-	let mojaFunkcia2 = function ( num ) {
-		return num
-	}
+let mojaFunkcia2 = function ( num ) {
+	return num
+}
 
-	let value = mojaFunkcia2()
-	console.log(value)
+let value = mojaFunkcia2()
+console.log(value)
 
-	// null ako priradená hodnota
-	let myAge = 30
-	myAge = null
-	console.log(myAge)
+// null ako priradená hodnota
+let myAge = 30
+myAge = null
+console.log(myAge)
+
+//------------------------------------------------------------------------------------
+
+// Funkcia s viacero parametrami
+function sucet(a, b, c) {
+	return a + b + c
+}
+
+let value4 =  sucet(5, 30, 3)
+console.log(value4)
+
+// Defaultna (východzia) hodnota
+function game(name = "Anonym", score = 0) {
+	return "Meno: " + name + ", Score: " + score
+}
+
+// game()
+//note pokiaľ definujem hodnoty "game("Tasi" ,21)", tak sa mi vypíše do konzoly "Tasi", "21".
+// game(undefined, 50)
+//note pokiaľ by som zavola funkciu "game(50)", tak by mi 50 bralo ako meno aby som toto zmenil, tak musím zadať do funkcie namiesto mena "undefined".
+let value5 = game()
+console.log(value5)
+
+//------------------------------------------------------------------------------------
+
