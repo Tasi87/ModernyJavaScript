@@ -136,3 +136,25 @@ if (value === "dospelý") {
 	console.log("Výsledok kontorly veku " + value)
 	console.log("Nemôžeš vstúpiť.")
 }
+
+//------------------------------------------------------------------------------------------
+
+/*
+Na dverách do kancelárie je tlačítkový display. Aby sa otvorili dvere, tak musíte zadať správny 3-miestny kód. Tento kód ste si navolili, ked ste nastupovali do práce. Uložte vami zvolený kód do troch premenných. Potom vytvorte funkciu, ktorá bude príjmať 3 parametre. Pokiaľ sa bude zhodovať so zvoleným kódom, tak sa do konzole vypíše "Môžete vstúpiť". Pokiaľ sa nebude zhodovať, tak sa vypíše "Zlé zadaný kód. Skúste to prosím znovu."
+*/
+
+let num1 = 5
+let num2 = 3
+let num3 = 8
+
+function code(a, b, c) {
+	if ( a === num1 && b === num2 && c === num3 ) {
+		console.log("Môžeš vstúpiť.")
+	} else {
+		console.log("Zlé zadaný kód. Skúste to prosím znovu.")
+	}
+}
+
+code(5, 3, 9)
+code(4, 3, 8)
+code(5, 3, 8)
