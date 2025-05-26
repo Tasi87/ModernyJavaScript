@@ -276,6 +276,35 @@ let result3 = school.closed()
 console.log(result3)
 
 //------------------------------------------------------------------------------------------
+/**
+1)		Vytvorte premenu vladneNariadenie. Priradte do nej hodnotu true alebo false. True znamená, že vládne nariadenie platí. False, že vládne nariadenie neplatí.
+
+2)		Vytvorte objekt school s type, street, city, capacity a dvoma metódami open a closed. Open bude vypisovať npr.: "Škola je otvorená". Closed to isté ale je zatvorená. Type a city do vety dosadíte pomocou this.
+
+3)		Vytvorte podmienku, že pokiaľ sú nariadenia true, tak sa zavolá funkcia closed. Pokiaľ false, tak sa zavolá funkcia open.
+*/
+
+let vladneNariadenie = true
+
+let school1 = {
+	type: "Gymnázium",
+	street: "Novohradská",
+	city: "Bratislava",
+	capacity: 300,
+	open: function () {
+		console.log(`Škola ${this.type} ${this.city} je otvorená.`)
+	},
+	closed: function () {
+		console.log(`Škola ${this.type} ${this.city} je zatvorená.`)
+	}
+}
+
+if ( vladneNariadenie ) {
+	school1.closed()
+} else {
+	school1.open()
+}
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
