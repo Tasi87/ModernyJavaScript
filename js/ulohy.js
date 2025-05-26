@@ -185,3 +185,35 @@ console.log(`Videl som film ${movie}, ktorý režíroval ${director}. Tento film
 
 //------------------------------------------------------------------------------------------
 
+/**
+Definujte 3 objekty, ktoré budú predstavovať konkrétnych ľudí s názvami person1, person2 a person3. Každý objekt (človek) bude mať meno, vek a mesto, v ktorom žije. Údaje sú na vás, ale person1 budete vždy vy.
+
+Do konzole vypíšte vety "Volám sa ... . Mám ... rokov a pochádzam z mesta ... ."
+*/
+
+let person1 = {
+		name: "Tasi",
+		age: 38,
+		city: "Bratislava"
+}
+
+let person2 = {
+		name: "Bleee",
+		age: 756,
+		city: "Kolorádo"
+}
+
+let person3 = {
+		name: "Ehmmm",
+		age: 54,
+		city: "Hmmm"
+}
+
+console.log(`
+	Volám sa ${person1.name}. Mám ${person1.age} rokov a pochádzam z mesta ${person1.city}.
+	Volám sa ${person2.name}. Mám ${person2.age} rokov a pochádzam z mesta ${person2.city}.
+	Volám sa ${person3.name}. Mám ${person3.age} rokov a pochádzam z mesta ${person3.city}.
+`)
+
+//------------------------------------------------------------------------------------------
+
