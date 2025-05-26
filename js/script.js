@@ -410,10 +410,40 @@
 	console.log(result3)
 	//! toto to až vypíše
 
-
 //------------------------------------------------------------------------------------
 
+// Objekty a this
+	//note this. zastupuje objekt a lepšie sa s ním pracuje keď sa píse kód objektovo, umožňuje pracovať univerzálne
+	let person2 = {
+		firstName: "Jožko",
+		secondName: "Mrkvička",
+		age: 100,
+		greet: function () {
+			console.log(this.firstName)
+			console.log(this.secondName)
+			console.log(this.age)
+			console.log(`Ahoj, ja som ${this.firstName}`)
+		}
+	}
+	
+	person2.greet()
+	
+	let person3 = {
+		firstName: "Janko",
+		secondName: "Hraško",
+		age: 20,
+		greet: function () {
+			console.log(this.firstName)
+			console.log(`Ahoj, ja som ${this.firstName}`)
+		}
+	}
+	
+	person3.greet()
 
-
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 
