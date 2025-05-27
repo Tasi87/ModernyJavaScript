@@ -306,6 +306,42 @@ if ( vladneNariadenie ) {
 }
 
 //------------------------------------------------------------------------------------------
+/**
+Do premennej password uložte ľubovolné heslo.
+
+Pokiaľ bude mať heslo viac ako 13 znakov, tak vypíše "Veľmi silné heslo". Pokiaľ bude mať medzi 8 až 13 (vrátane), tak vypíše "Silné heslo". Pokiaľ menej než 8, tak vypíše "Slabé heslo".
+
+Zistite, či heslo obsahuje znaky 1234 v tomto poradí. Pokiaľ áno, tak sa vypíše do konzoli "Heslo nemsie obsahovať 1234". Inak sa vypíše "Heslo je v poriadku".
+*/
+
+let password = "Paraclimbing1234"
+	if (password.length > 13) {
+		console.log("Veľmi silné heslo")
+	} else if (password.length >= 8) {
+		console.log("Silné heslo")
+	} else {
+		console.log("Slabé heslo")
+	}
+	if (password.includes(1234)) {
+		console.log("Heslo nesmie obsahovať 1234")
+	} else {
+		console.log("Heslo je v poriadku")
+	}
+	// Podľa mňa lepší spôsob
+	// let password = "123678"
+
+	// if (password.includes("1234")){
+	// 	console.log("Heslo nesmie obsahovať 1234")
+	// } else {
+	// 	let confirm = "Heslo je v poriadku"
+	// 	if (password.length > 13) {
+	// 		console.log(confirm + " Veľmi silné heslo")
+	// 	} else if (password.length >= 8){
+	// 		console.log(confirm + " Silné heslo")
+	// 	} else {
+	// 		console.log(confirm + " Slabé heslo")
+	// 	}
+	// }
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
