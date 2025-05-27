@@ -386,12 +386,15 @@
 // Objekty a ich metódy
 	// Metódy
 	//note Metóda je funkcia priradená nejakému objektu.
+
 	let person1 = {
+		//note toto sú PROPERTY / VLASTNOSTI
 		firstName: "Jožko",
 		lastName: "Mrkvička",
 		age: 21,
 		height: 181,
 		salary: 5000,
+		//note toto sú METHOD / METÓDY
 		greet: function (friends/** toto je PARAMETER */) {
 			console.log(`
 				Ahoj, mám ${friends} priateľov.
@@ -441,6 +444,21 @@
 	person3.greet()
 
 //------------------------------------------------------------------------------------
+	
+	let nickName = "Tasi"
+		// dĺžka stringu
+		console.log(nickName.length)					//note .lengt je PROPERTY
+		// veľké/malé písmená
+		console.log(nickName.toUpperCase())			//note .toUpperCase je METHOD
+		console.log(nickName.toLowerCase())			
+		// zahrňuje
+		let sentence = "Tasi sa učí javascript."
+		let word = "Tasi"
+		console.log(sentence.includes(word))
+		// odstranenie white spaces/bielych medzier
+		let nick = "     Peanut"
+		console.log(nick.trim())						//note odstraňuje prebytočné medzeri
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
