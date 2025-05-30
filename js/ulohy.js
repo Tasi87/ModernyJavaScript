@@ -418,7 +418,36 @@ toDo.forEach(function (activity, index) {
 	console.log(`${number}. ${activity}`)	//note pridá "." za číslom
 })
 
-
 //------------------------------------------------------------------------------------------
+/**
+1) Vytvorte pole toDo s úlohami:
+	postrihať video
+	upratať izbu
+	poupratovať
+
+	Vypíšte pole v tvare:
+	1. postrihať video
+	2. upratať izbu
+	3. poupratovať
+
+2) Vytvorte prázdne pole a pomocou cyklu ho naplňte číslami od 0 po 4. Pole vypíšte do konzole.
+*/
+
+let toDo1 = ["postrihať video", "upratať izbu", "poupratovať"]
+for (let i = 0; i < toDo1.length; i++) {
+	console.log(`${i + 1}. ${toDo1[i]}`)
+}
+
+let numbers = []
+for (let index = 0; index < 5; index++) {
+	numbers.push(index)
+}
+
+for (let index = 0; index < numbers.length; index++) {
+	console.log(numbers[index])	
+}
+
+
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
