@@ -520,8 +520,34 @@
 	// zmeny vlastností textu v konzole
 	console.log("%cTento text je farebný.", "color: #db0000; font-weight: bold; background: #bada55")
 
-
 //------------------------------------------------------------------------------------
+
+	// polia a cykly
+	//note polia sa číslujú od 0
+	let emlpoyes = ["David", "Martin", "Jana"]
+
+	console.log(emlpoyes)
+	console.log(emlpoyes[0])
+	console.log(emlpoyes[1])
+	console.log(emlpoyes[2])
+
+	let data = ["Anna", 12, true, false, 8.314]
+
+	console.log(data[0])
+	console.log(data[1])
+	console.log(data[2])
+	console.log(data[3])
+	console.log(data[4])
+
+	// dĺžka pola
+	console.log(emlpoyes.length)
+	console.log(data.length)
+
+	//note keď chcem zistiť poslednú hodnotu v poli bez toho aby som vedeľ koľko hodnôt má pole
+	console.log(data[data.length-1])
+	//note predposledná hodnota v poli atď.
+	console.log(data[data.length-2])
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
