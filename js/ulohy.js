@@ -385,18 +385,40 @@ console.log(passwords[index])
 // 	console.log(nickName)
 
 	// Riešenie 1
-	let myArray = []
-	myArray.push(prompt("Pridaj meno na koniec:"))
-	myArray.push(prompt("Pridaj meno na koniec:"))
-	myArray.push(prompt("Pridaj meno na koniec:"))
-	// Riešenie 2
-	myArray.unshift(prompt("Pridaj meno na začiatok:"))
-	myArray.unshift(prompt("Pridaj meno na začiatok:"))
-	myArray.unshift(prompt("Pridaj meno na začiatok:"))
+	// let myArray = []
+	// myArray.push(prompt("Pridaj meno na koniec:"))
+	// myArray.push(prompt("Pridaj meno na koniec:"))
+	// myArray.push(prompt("Pridaj meno na koniec:"))
+	// // Riešenie 2
+	// myArray.unshift(prompt("Pridaj meno na začiatok:"))
+	// myArray.unshift(prompt("Pridaj meno na začiatok:"))
+	// myArray.unshift(prompt("Pridaj meno na začiatok:"))
 
-	console.log(myArray)
+	// console.log(myArray)
 
 //------------------------------------------------------------------------------------------
+/**
+Vytvorte pole s názvom toDo a uložte do neho 4 úlohy, ktoré máte spraviť:
+- vyvenčiť psa
+- kúpiť kečup
+- vymaľovať izbu
+- spraviť si desiatu
+
+Potom pole toDo vypíšte do tohoto tvaru:
+1. vyvenčiť psa
+2. kúpiť kečup
+3. vymaľovať izbu
+4. spraviť si desiatu
+*/
+
+let toDo = ["vyvenčiť psa", "kúpiť kečup", "vymaľovať izbu", "spraviť si desiatu"]
+
+toDo.forEach(function (activity, index) {
+	let number = index + 1						//note zariadí aby začínalo od 1 a nie od 0
+	console.log(`${number}. ${activity}`)	//note pridá "." za číslom
+})
+
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
