@@ -365,8 +365,19 @@ if (sum >= 25) {
 	console.log("Skýs šťastie znovu.")
 }
 
-
 //------------------------------------------------------------------------------------------
+/**
+Vytvorte premenný password (pole) a uložte do nej 3 stringy - text (aj text môže mať v sebe čísla). Vašou úlohou je náhodne vybrať jedno heslo. Pri každom znovunačítaní stránky sa do konzole vypíše jedno z troch hesiel (náhodne).
+*/
+
+let passwords = ["Bleee76576", "Kkbca876", "UGH765"]
+
+let randomNumber = Math.ceil(Math.random()*3)		//note keď *2 generujú sa iba 1 a 2
+																	//note keď *3 tak sa mi generujú 1, 2 a 3
+let index = passwords.length - randomNumber			//note password.length je dĺžka pola, od ktorej odpočítam randomNumber, ktoré generuje náhodné čísla od 1 po 3, čiže napr.: keď bude password.lenght "2" a randomNumber "2", tak 2 - 2 = 0 a tým pádom bude heslo "Bleee76576".
+
+console.log(passwords[index])
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
