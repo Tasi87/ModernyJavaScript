@@ -379,6 +379,23 @@ let index = passwords.length - randomNumber			//note password.length je dĺžka 
 console.log(passwords[index])
 
 //------------------------------------------------------------------------------------------
+
+// Pridavanie do pola cez "prompt" 3 od konca a 3 od začiatku
+// let nickName = prompt("Zadaj meno")
+// 	console.log(nickName)
+
+	// Riešenie 1
+	let myArray = []
+	myArray.push(prompt("Pridaj meno na koniec:"))
+	myArray.push(prompt("Pridaj meno na koniec:"))
+	myArray.push(prompt("Pridaj meno na koniec:"))
+	// Riešenie 2
+	myArray.unshift(prompt("Pridaj meno na začiatok:"))
+	myArray.unshift(prompt("Pridaj meno na začiatok:"))
+	myArray.unshift(prompt("Pridaj meno na začiatok:"))
+
+	console.log(myArray)
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
