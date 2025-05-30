@@ -573,5 +573,21 @@
 		console.log(testArray)
 
 //------------------------------------------------------------------------------------
+	// Mdn array - properties a methods
+	// odstránenie z ľubovolnej pozície v poli
+	let myArray = ["jedna", "dva", "tri"]
+	myArray.splice(0,1)		//note začne s odstraňovaním prvkov na pozící 1 a koľko prvkov odstráni
+	console.log(myArray)
+
+	// pridanie prvku do pola pred konkrétnu pozíciu pomocou "splice"
+	let mySecondArray = ["jedna", "dva", "štyri"]
+	mySecondArray.splice(2,0, "tri") //note vyber 2. prvok, nič nemaž, a pridaj pred neho prvok "tri"
+	console.log(mySecondArray)
+
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 
