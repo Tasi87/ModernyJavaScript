@@ -522,7 +522,7 @@
 
 //------------------------------------------------------------------------------------
 
-	// polia a cykly
+	// Polia
 	//note polia sa číslujú od 0
 	let emlpoyes = ["David", "Martin", "Jana"]
 
@@ -585,6 +585,21 @@
 	console.log(mySecondArray)
 
 //------------------------------------------------------------------------------------
+
+	// Cyklus "forEach"
+	let employees = ["Aragorn", "Legolas", "Gymli", "Gandalf"]
+	
+	// vypisovanie obsahu poľa podľa mena
+	// employees.forEach(function (person) {
+		// 	console.log(person)
+		// })
+		
+	// vypisovanie obsahu poľa podľa indexu
+	employees.forEach(function (person, index) {
+		console.log(index)
+		console.log(person)
+	})
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
