@@ -549,6 +549,29 @@
 	console.log(data[data.length-2])
 
 //------------------------------------------------------------------------------------
+
+	// Práca s poliami
+		// Prepísanie prvku
+		let testArray = ["test1", "test2", "test3"]
+		testArray[0] = "Nový prvok v poli"
+		console.log(testArray)
+
+		// Pridanie posledného prvku
+		testArray.push("test4")
+		console.log(testArray) 
+
+		// Odstránenie posledného prvku
+		testArray.pop()
+		console.log(testArray)
+
+		// Pridanie prvého prvku
+		testArray.unshift("test0")
+		console.log(testArray)
+
+		// Odstránenie prvého prvku
+		testArray.shift()
+		console.log(testArray)
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 
