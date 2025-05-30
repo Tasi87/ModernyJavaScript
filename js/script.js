@@ -480,8 +480,21 @@
 
 //------------------------------------------------------------------------------------
 
+// const a let
+	//note const sa používa ak sa NIKDY nebude meniť hodnota premennej
+	//note let sa používa ak sa hodnota premennej v priebehu času bude meniť
+	// const a premenná
+	const nickName1 = "Tasi"
 
+	console.log(nickName1)
 
+	// const a objekt
+	//note obsah/vlastnotsti objektu môžeme prepisovať
+	//! nemôžem meniť objekt ako celok napr.: nemôžem do const uložiť nový objekt
+	const man = {
+		age: 34
+	}
+	man.age = 50
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
