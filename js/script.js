@@ -328,7 +328,8 @@
 	}
 
 	// výpis jednotlivých vlastností
-	console.log(myBook.title) //note "myBook.title" je bodková notácia
+	console.log(myBook.title) 							
+	//note "myBook.title" je bodková notácia
 	console.log(myBook.author)
 	console.log(myBook.published)
 	
@@ -457,7 +458,7 @@
 		console.log(sentence.includes(word))
 		// odstranenie white spaces/bielych medzier
 		let nick = "     Peanut"
-		console.log(nick.trim())						//note odstraňuje prebytočné medzeri
+	console.log(nick.trim())							//note odstraňuje prebytočné medzeri
 
 //------------------------------------------------------------------------------------
 
@@ -466,18 +467,21 @@
 	console.log(number.toFixed(2))
 	// zaokrúhľovanie na celé čísla
 	console.log(Math.round(number))
-	console.log(Math.floor(number))				//note zaokrúhľuje vždy dole
-	console.log(Math.ceil(number))				//note zaokrúhľuje vždy hore
+	console.log(Math.floor(number))					//note zaokrúhľuje vždy dole
+	console.log(Math.ceil(number))					//note zaokrúhľuje vždy hore
 	// náhodné číslo
-	console.log(Math.random())						//note desatiné čísla
+	console.log(Math.random())							//note desatiné čísla
 	console.log(Math.random() *10)
-	console.log(Math.ceil(Math.random() * 10))//note náhodné čísla od 0 po 10
+	console.log(Math.ceil(Math.random() * 10))	//note náhodné čísla od 0 po 10
 	// náhodné číslo z intervalu
 	let min = -15
 	let max = 0
 	console.log(Math.floor(Math.random() * (max - min + 1)) + min)
 
 //------------------------------------------------------------------------------------
+
+
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------

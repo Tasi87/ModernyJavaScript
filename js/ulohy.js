@@ -343,5 +343,32 @@ let password = "Paraclimbing1234"
 	// 	}
 	// }
 //------------------------------------------------------------------------------------------
+
+/**
+Vytvorte 6 premenných number1 až 6. Do každej premennej uložíte výsledok hodu kockou - teda číslo od 1 do 6. Potom do premennej sum súčet všetkých čísiel sčítate a pokiaľ je súčet vetší alebo rovný 25, tak vypíšete "Výhra". Pokiaľ menčí, tak "Skus znovu šťastie". Do konzole vypíšte celkový súčet 6 čísel.
+*/
+
+let number1 = Math.ceil ( Math.random() * 6 )
+let number2 = Math.ceil ( Math.random() * 6 )
+let number3 = Math.ceil ( Math.random() * 6 )
+let number4 = Math.ceil ( Math.random() * 6 )
+let number5 = Math.ceil ( Math.random() * 6 )
+let number6 = Math.ceil ( Math.random() * 6 )
+
+let sum = number1 + number2 + number3 + number4 + number5 + number6
+
+console.log(sum)
+
+if (sum >= 25) {
+	console.log("Výhra!")
+} else {
+	console.log("Skýs šťastie znovu.")
+}
+
+
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
