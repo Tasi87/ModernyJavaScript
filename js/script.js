@@ -667,6 +667,10 @@
 		title: "Harry Potter a vezeň z Azkabanu",
 		author: "J. K. Rowlingová",
 		published: 1999
+	}, {
+		title: "Životopis Rowlingovej",
+		author: "Tasi",
+		published: 1999
 	}]
 
 	// console.log(books[0].title)
@@ -713,13 +717,13 @@
 	//! NEVYPISUJE INDEX, ALE KONKRÉTNU HODNOTU OBJEKTU V POLI, ale zastaví sa na prvom objekte, ktorý zodpovedá podmienke!
 	// find a bežné pole
 	let myArray1 = [1, 3, 20, 2, 8]
-
+	
 	let result6 = myArray1.find(function (oneNumber) {
 		return oneNumber > 4
 	})
-
+	
 	console.log(result6)
-
+	
 	// find a pole objektov
 	//note Hľadá v poli objektov konkrétny objekt alebo podľa konkrétneho parametru
 	let oneResult = books.find(function (oneBook) {
@@ -727,10 +731,55 @@
 			return oneBook
 		}
 	})
-
+	
 	console.log(oneResult.title)
+	
+	//------------------------------------------------------------------------------------
+	console.log("%cPole objektov a ich filtrovanie:", "color: red; font-weight: bold")
+	// Pole objektov a ich filtrovanie
+	// filtrovanie bežného poľa
+	let names = ["Laura", "Marcus", "Sára", "Tasi", "Radka"]
+		// filtrovanie mien podľa "ra"
+		let arrayResults = names.filter(function (oneName) {
+			let weTryFind = oneName.toLowerCase().includes("ra")
+			return weTryFind
+			//! JE VEĽMI DÔLEŽITÉ ZADEFINOVAŤ .toLowerCase, PRETOŽE BY POTOM NEZOBRAZILO TO ČO JE VEĽKÝM PÍSMENOM "Radka". Pomocou .toLowerCase sa všetko zmení na malé písmená a všetky objekty v poli vyfiltruje podľa "ra" aj keď niektoré mená začínali "Ra"!
+		})
 
-//------------------------------------------------------------------------------------
+		console.log(arrayResults)
+
+	// filtrovanie na poli objektov
+	//! !!!POZOR!!! "?" MUSÍ BYŤ, INÁČ SA VRACIA UNDEFINED ALEBO NULL A TO JE CHYBA. KONZOLA VYPISUJE:
+	/**
+	Uncaught TypeError: can't access property "toLowerCase", oneBook.author is undefinedarrayResults1 http://127.0.0.1:5500/js/script.js:750
+	<anonymous> http://127.0.0.1:5500/js/script.js:749
+	 */
+	let arrayResults1 = books.filter(function (oneBook) {
+		let weTryFind1 = oneBook.author?.toLowerCase().includes("row")
+		return weTryFind1
+	})
+
+	console.log(arrayResults1)
+
+	// Keď chcem iba vypísať objekty napr.: podľa title, tak použíjem "forEach"
+	arrayResults1.forEach(function (oneResult) {
+		console.log(oneResult.title)
+	})
+	
+	console.log("%cKombinácia filtrovania:", "color: purple; font-weight: bold")
+	// Keď chcem filtrovať podľa author a zároveň podľa title
+	let arrayResults2 = books.filter(function (oneBook) {
+		let weTryFind1 = oneBook.author?.toLowerCase().includes("row")
+		let weTryFind2 = oneBook.title?.toLowerCase().includes("row")
+		return weTryFind1 || weTryFind2
+	})
+
+	// console.log(arrayResults2)
+
+	arrayResults2.forEach(function (oneResult) {
+		console.log(oneResult.title)
+	})
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
