@@ -487,7 +487,8 @@ let criminals = [{
 	city: "Nitra"
 }]
 
-let suspect = prompt("Zadaj krstné meno podozrivého")
+// let suspect = prompt("Zadaj krstné meno podozrivého")
+let suspect = "Róbert"
 
 let result = criminals.findIndex(function (oneSuspect) {
 	return oneSuspect.firstName === suspect
@@ -504,6 +505,61 @@ console.log(`Podozrivý:
 `)
 
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 21:", "color: red; font-weight: bold")
+/**
+Svedok videl z miesta vraždy odchádzať auto.
+Vie len to, že poznávacia značka obsahovala 22.
+Vašou úlohou je v nižšie uvedenej databáze kriminálnikov nájsť tých, ktorí majú v ŠPZ 22.
+Ich všetký údaje následne vypíšte do konzole. Napr.:
+Meno:
+Priezvisko:
+Rok narodenia
+atď.
+
+To, čo hľadáte (v našom prípade 22), bude zadávané pomocou promptu.
+*/
+
+let criminals1 = [{
+	firstName: "Martin",
+	secondName: "Zelený",
+	birth: 1985,
+	licencePlate: "85C3322",
+	address: "U sloupů 16",
+	city: "České Budějovice"
+}, {
+	firstName: "Jana",
+	secondName: "Růžová",
+	birth: 1996,
+	licencePlate: "93K3922",
+	address: "Malská 29",
+	city: "České Budějovice"
+}, {
+	firstName: "Filip",
+	secondName: "Modrý",
+	birth: 1989,
+	licencePlate: "2EP6328",
+	address: "Stevardská 38",
+	city: "České Budějovice"
+}]
+
+let witness = prompt("Zadajte údaj:")
+
+let search = criminals1.filter(function (oneSuspect) {
+	let searching = oneSuspect.licencePlate?.toLowerCase().includes(witness)
+	return searching
+})
+
+search.forEach(function (oneSuspect) {
+	console.log(`Podozrivý:
+		Meno: ${oneSuspect.firstName}
+		Priezvisko: ${oneSuspect.secondName}
+		Rok narodenia: ${oneSuspect.birth}
+		Adresa: ${oneSuspect.address}
+		Mesto: ${oneSuspect.city}
+		ŠPZ: ${oneSuspect.licencePlate}
+	`)
+})
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
