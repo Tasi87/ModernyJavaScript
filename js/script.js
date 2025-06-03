@@ -708,6 +708,28 @@
 	console.log(result5)		//! Nevráti "true", ale index!
 
 //------------------------------------------------------------------------------------
+	console.log("%cPole objektov a metóda find:", "color: red; font-weight: bold")
+	// Pole objektov a metóda find
+	//! NEVYPISUJE INDEX, ALE KONKRÉTNU HODNOTU OBJEKTU V POLI, ale zastaví sa na prvom objekte, ktorý zodpovedá podmienke!
+	// find a bežné pole
+	let myArray1 = [1, 3, 20, 2, 8]
+
+	let result6 = myArray1.find(function (oneNumber) {
+		return oneNumber > 4
+	})
+
+	console.log(result6)
+
+	// find a pole objektov
+	//note Hľadá v poli objektov konkrétny objekt alebo podľa konkrétneho parametru
+	let oneResult = books.find(function (oneBook) {
+		if (oneBook.published === 1999) {
+			return oneBook
+		}
+	})
+
+	console.log(oneResult.title)
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
