@@ -620,6 +620,31 @@
 	let k = 2
 
 //------------------------------------------------------------------------------------
+	// Pole a indexOf
+	//! indexOf rozlišuje veľké a malé písmená
+	//note indexOf sa používa pri prehľadávaní poľa
+
+	let employees2 = ["Marcus", "Lucius", "Valerius"]
+
+	console.log(employees2.indexOf("Marcus"))
+	console.log(employees2.indexOf("Lucius"))
+	console.log(employees2.indexOf("Valerius"))
+
+	console.log(employees2.indexOf("Laura"))
+	console.log(employees2.indexOf("Sára"))			//note pokial sa mi vráti hodnotá -1, tak dané dáta sa v poli nenachádzajú
+
+	if(employees2.indexOf("Tasi") === -1) {
+		console.log("Užívateľ nebol nájdený")
+	} else {
+		console.log("Užívateľ sa našiel")
+	}
+
+	if(employees2.indexOf("Tasi") != -1) {
+		console.log("Užívateľ nebol nájdený")
+	} else {
+		console.log("Užívateľ sa našiel")
+	}
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
