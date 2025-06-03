@@ -674,7 +674,8 @@
 	// console.log(books[0].published)
 
 	console.log(books.indexOf({}))
-	//! Pokiaľ je v Poli prázdny objekt a hľadáme cez indexOf prázdny objekt, tak to nebude fungovať, pretože prázdny objekt v poli nie je rovnocenný s hľadaným prázdnym objektom cez indexOf! IndexOf odkazuje na iné miesta v pamäti!
+	//! Pokiaľ je v Poli prázdny objekt a hľadáme cez indexOf prázdny objekt, tak to nebude fungovať, pretože prázdny objekt v poli nie je rovnocenný s hľadaným prázdnym objektom cez indexOf! IndexOf odkazuje na iné miesta v pamäti! IndexOf funguje na pole "string" a "number"!
+	//! indexOf NEFUNGUJE NA POLE OBJEKTOV!
 	
 	let data1 = {
 		title: "Harry Potter a kameň mudrcov",
@@ -689,6 +690,40 @@
 	console.log(data2)
 	//! Keď data1 alebo data2 prepíšu nejakú hodnotu v objekte tak sa zobrazí prepísaná hodnota v oboch, pokiaľ sú navzájom prepojené ako v tomto prípade.
 
+//------------------------------------------------------------------------------------
+	console.log("%cPole objektov a metóda findIndex:", "color: red; font-weight: bold")
+	// Pole objektov a metóda findIndex
+	//! findIndex nevracia hodnotu v poli, ale index(pozíciu) v poli, avšak vráti iba prvú možnosť, ktorá zodpovedá podmienke a ďalej už nevypisuje!
+	let array = [8, 11, 8, 20, 39]
+
+	let result4 = array.findIndex(function (number) {
+		return number > 15
+	})
+	console.log(result4)
+
+	// findIndex v poli Objektov
+	let result5 = books.findIndex(function (oneBook) {
+		return oneBook.published === 1998
+	})
+	console.log(result5)		//! Nevráti "true", ale index!
+
+
+
+
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 
