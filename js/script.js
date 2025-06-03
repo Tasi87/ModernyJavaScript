@@ -34,7 +34,7 @@
 	//! napr.: let if = 5;
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cString a Number:", "color: red; font-weight: bold")
 // String
 	let firstName1 = "Tasi";
 
@@ -54,7 +54,7 @@
 	//note > väčší (>=)
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cPodmienky if a else:", "color: red; font-weight: bold")
 // Podmienky if a else
 
 	let age2 = 10
@@ -83,7 +83,7 @@
 	}
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cLogické operátory:", "color: red; font-weight: bold")
 // Logické operátory
 
 	// a zároveň - &&
@@ -115,7 +115,7 @@
 		//note false = false, false
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cScope:", "color: red; font-weight: bold")
 // Scope - rozsah
 	// Globálny scope (first)
 	// Lokálny scope (second)
@@ -136,7 +136,7 @@
 	}
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cVariable shadowing:", "color: red; font-weight: bold")
 // Variable shadowing
 
 	let myName = "Tasi"
@@ -156,7 +156,7 @@
 	}
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cFunkcie:", "color: red; font-weight: bold")
 // Funkcie
 
 	function pozdrav1 () {
@@ -177,7 +177,7 @@
 	pozdrav3()
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cFunkcie - parametre a argumenty:", "color: red; font-weight: bold")
 // Funkcie - parameter a argument
 
 	// Parametre
@@ -195,7 +195,7 @@
 	zdraviacaFunkcia("Tasi")
 
 //------------------------------------------------------------------------------------
-
+	console.log("%creturn:", "color: red; font-weight: bold")
 	function nasobenie(num) {
 		let result = num * num
 		return result
@@ -216,7 +216,7 @@
 	console.log(value2)
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cundefined a null:", "color: red; font-weight: bold")
 // undefined a null
 	//note "undefined" je hláska JS
 	//note "null" je definované programátorom
@@ -252,7 +252,7 @@
 	console.log(myAge)
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cFunkcia s viacero parametrami:", "color: red; font-weight: bold")
 	// Funkcia s viacero parametrami
 	function sucet(a, b, c) {
 		return a + b + c
@@ -274,7 +274,7 @@
 	console.log(value5)
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cFunkcie Globálne a lokálne scope funkcie:", "color: red; font-weight: bold")
 // Funkcie Globálne a lokálne scope funkcie
 
 	//note Globálny scope môžem používať kdekoľvek globálne a aj v Lokálnych scopoch.
@@ -301,8 +301,8 @@
 	code(5, 3, 8)
 
 //------------------------------------------------------------------------------------
-
-// Template strings
+	console.log("%cTemplate strings:", "color: red; font-weight: bold")
+	// Template strings
 
 	let myName3 = "Hanry Proper"
 	let age4 = 15
@@ -318,7 +318,7 @@
 	pozdrav("Jožko", "Mrkvička")
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cObjekty:", "color: red; font-weight: bold")
 // Objekty
 
 	let myBook = {
@@ -344,7 +344,7 @@
 	console.log(`${myBook.title} je kniha od autorky ${myBook.author} a bola vydaná v roku ${myBook.published}.`)
 	
 //------------------------------------------------------------------------------------
-
+	console.log("%cVypisovanie objektov pomocou funkcie:", "color: red; font-weight: bold")
 // Vypisovanie objektov pomocou funkcie
 	let firstBook = {
 		title: "Harry Potter a kameň mudrcov",
@@ -366,7 +366,7 @@
 	resultBook(secondBook)
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cObjekty a return:", "color: red; font-weight: bold")
 // Objekty a return
 	
 	function bookInfo(book) {
@@ -383,7 +383,7 @@
 	// console.log(result2.publishing)
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cObjekty a ich metódy:", "color: red; font-weight: bold")
 // Objekty a ich metódy
 	// Metódy
 	//note Metóda je funkcia priradená nejakému objektu.
@@ -415,8 +415,8 @@
 	//! toto to až vypíše
 
 //------------------------------------------------------------------------------------
-
-// Objekty a this
+	console.log("%cObjekty a this:", "color: red; font-weight: bold")
+	// Objekty a this
 	//note this. zastupuje objekt a lepšie sa s ním pracuje keď sa píse kód objektovo, umožňuje pracovať univerzálne
 	let person2 = {
 		firstName: "Jožko",
@@ -445,7 +445,7 @@
 	person3.greet()
 
 //------------------------------------------------------------------------------------
-	
+	console.log("%cPráca so STRING:", "color: red; font-weight: bold")
 	let nickName = "Tasi"
 		// dĺžka stringu
 		console.log(nickName.length)					//note .lengt je PROPERTY
@@ -461,7 +461,7 @@
 	console.log(nick.trim())							//note odstraňuje prebytočné medzeri
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cMatemaciké operácie:", "color: red; font-weight: bold")
 	let number = 3.1453
 	// zaokrúhľovanie na desatiné miesta
 	console.log(number.toFixed(2))
@@ -479,8 +479,8 @@
 	console.log(Math.floor(Math.random() * (max - min + 1)) + min)
 
 //------------------------------------------------------------------------------------
-
-// const a let
+	console.log("%cconst a let:", "color: red; font-weight: bold")
+	// const a let
 	//note const sa používa ak sa NIKDY nebude meniť hodnota premennej
 	//note let sa používa ak sa hodnota premennej v priebehu času bude meniť
 	// const a premenná
@@ -495,8 +495,9 @@
 		age: 34
 	}
 	man.age = 50
-//------------------------------------------------------------------------------------
 
+//------------------------------------------------------------------------------------
+	console.log("%cvar a let:", "color: red; font-weight: bold")
 	// var a let
 	//! nezabraňuje opäatovnej predeklerácií premennej
 	//note var sa už nepoužíva
@@ -516,12 +517,12 @@
 	var value3 = 6
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cZmeny vlastností textu v konzole:", "color: red; font-weight: bold")
 	// zmeny vlastností textu v konzole
 	console.log("%cTento text je farebný.", "color: #db0000; font-weight: bold; background: #bada55")
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cPolia:", "color: red; font-weight: bold")
 	// Polia
 	//note polia sa číslujú od 0
 	let emlpoyes = ["David", "Martin", "Jana"]
@@ -549,7 +550,7 @@
 	console.log(data[data.length-2])
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cPráca s poliami:", "color: red; font-weight: bold")
 	// Práca s poliami
 		// Prepísanie prvku
 		let testArray = ["test1", "test2", "test3"]
@@ -573,6 +574,7 @@
 		console.log(testArray)
 
 //------------------------------------------------------------------------------------
+	console.log("%cProperties a methods:", "color: red; font-weight: bold")
 	// Mdn array - properties a methods
 	// odstránenie z ľubovolnej pozície v poli
 	let myArray = ["jedna", "dva", "tri"]
@@ -585,7 +587,7 @@
 	console.log(mySecondArray)
 
 //------------------------------------------------------------------------------------
-
+	console.log("%cCyklus forEach:", "color: red; font-weight: bold")
 	// Cyklus "forEach"
 	let employees = ["Aragorn", "Legolas", "Gymli", "Gandalf"]
 	
@@ -601,6 +603,7 @@
 	})
 
 //------------------------------------------------------------------------------------
+	console.log("%cCyklus for:", "color: red; font-weight: bold")
 	// Cyklus "for"
 	for(let i = 0; i <= 5; i++) {			//note i++ = +1
 		console.log(`${i}: testovaci text`)
@@ -620,6 +623,7 @@
 	let k = 2
 
 //------------------------------------------------------------------------------------
+	console.log("%cPole a indexOf:", "color: red; font-weight: bold")
 	// Pole a indexOf
 	//! indexOf rozlišuje veľké a malé písmená
 	//note indexOf sa používa pri prehľadávaní poľa
@@ -646,6 +650,10 @@
 	}
 
 //------------------------------------------------------------------------------------
+	console.log("%c:", "color: red; font-weight: bold")
+
+
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 
