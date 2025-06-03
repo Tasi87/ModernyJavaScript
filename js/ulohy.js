@@ -1,3 +1,4 @@
+console.log("%cÚloha 1:", "color: red; font-weight: bold")
 // Variables
 	// Počet dosiahnutých bodov
 		let student1 = 69;
@@ -17,7 +18,7 @@ console.log(student1Name + " dosiahol(a) " + result1 + "% úspešnosti.");
 console.log(student2Name + " dosiahol(a) " + result2 + "% úspešnosti.");
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 2:", "color: red; font-weight: bold")
 // Definovanie veky
 let age = 69;
 
@@ -36,7 +37,7 @@ console.log("Dospelý: " + adult);
 console.log("Dôchodca: " + pensioner);
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 3:", "color: red; font-weight: bold")
 let firstName = "Tasi"
 
 if( firstName === "Tasi" ) {
@@ -50,7 +51,7 @@ if( firstName === "Tasi" ) {
 }
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 4:", "color: red; font-weight: bold")
 let position = "Programátor"
 
 if ( position === "Programátor" ) {
@@ -64,7 +65,7 @@ if ( position === "Programátor" ) {
 }
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 5:", "color: red; font-weight: bold")
 let temperature = 26
 if ( temperature <= 10 ) {
 	console.log("chladno")
@@ -78,7 +79,7 @@ if ( temperature <= 10 ) {
 	//} pri tomto zápise je menej písania
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 6:", "color: red; font-weight: bold")
 let weight = 100
 let height = 190
 
@@ -89,7 +90,7 @@ if ( weight >= 100 || height >= 190 ) {
 }
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 7:", "color: red; font-weight: bold")
 //function naDruhu (num) {
 	//	console.log(num * num)
 	//}
@@ -107,6 +108,7 @@ if ( weight >= 100 || height >= 190 ) {
 		zdraviacaFunkcia("Tasi")
 		
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 8:", "color: red; font-weight: bold")
 /**
 1)	Vytvorte funkciu adultChecker, do ktorej zadáme parameter vek a pokiaľ bude 
 vek väčší alebo rovný 18, tak sa vráti ako výsledok slovo "dospelý" a pokiaľ
@@ -138,7 +140,7 @@ if (value === "dospelý") {
 }
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 9:", "color: red; font-weight: bold")
 /**
 Na dverách do kancelárie je tlačítkový display. Aby sa otvorili dvere, tak musíte zadať správny 3-miestny kód. Tento kód ste si navolili, ked ste nastupovali do práce. Uložte vami zvolený kód do troch premenných. Potom vytvorte funkciu, ktorá bude príjmať 3 parametre. Pokiaľ sa bude zhodovať so zvoleným kódom, tak sa do konzole vypíše "Môžete vstúpiť". Pokiaľ sa nebude zhodovať, tak sa vypíše "Zlé zadaný kód. Skúste to prosím znovu."
 */
@@ -160,7 +162,7 @@ code(4, 3, 8)
 code(5, 3, 8)
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 10:", "color: red; font-weight: bold")
 let firstName1 = "Harry"
 let lastName1 = "Potter"
 let age1 = 15
@@ -184,7 +186,7 @@ Z troch vyššie uvedených premenných zostavte pomocou template strings vetu "
 console.log(`Videl som film ${movie}, ktorý režíroval ${director}. Tento film získal ocenenie ${award}.`)
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 11:", "color: red; font-weight: bold")
 /**
 Definujte 3 objekty, ktoré budú predstavovať konkrétnych ľudí s názvami person1, person2 a person3. Každý objekt (človek) bude mať meno, vek a mesto, v ktorom žije. Údaje sú na vás, ale person1 budete vždy vy.
 
@@ -219,7 +221,7 @@ console.log(`
 `)
 
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 12:", "color: red; font-weight: bold")
 /**
 Vezmite 3 objekty z predošlej úlohy a vypíšte ich pomocou funkcie.
 */
@@ -243,6 +245,7 @@ personInfo(person2)
 personInfo(person3)
 
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 13:", "color: red; font-weight: bold")
 /**
 Vytvorte objekt s názvom school. Tá bude mať vlastnosti:
 type:
@@ -276,6 +279,7 @@ let result3 = school.closed()
 console.log(result3)
 
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 14:", "color: red; font-weight: bold")
 /**
 1)		Vytvorte premenu vladneNariadenie. Priradte do nej hodnotu true alebo false. True znamená, že vládne nariadenie platí. False, že vládne nariadenie neplatí.
 
@@ -306,6 +310,7 @@ if ( vladneNariadenie ) {
 }
 
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 15:", "color: red; font-weight: bold")
 /**
 Do premennej password uložte ľubovolné heslo.
 
@@ -343,7 +348,7 @@ let password = "Paraclimbing1234"
 	// 	}
 	// }
 //------------------------------------------------------------------------------------------
-
+console.log("%cÚloha 16:", "color: red; font-weight: bold")
 /**
 Vytvorte 6 premenných number1 až 6. Do každej premennej uložíte výsledok hodu kockou - teda číslo od 1 do 6. Potom do premennej sum súčet všetkých čísiel sčítate a pokiaľ je súčet vetší alebo rovný 25, tak vypíšete "Výhra". Pokiaľ menčí, tak "Skus znovu šťastie". Do konzole vypíšte celkový súčet 6 čísel.
 */
@@ -366,6 +371,7 @@ if (sum >= 25) {
 }
 
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 17:", "color: red; font-weight: bold")
 /**
 Vytvorte premenný password (pole) a uložte do nej 3 stringy - text (aj text môže mať v sebe čísla). Vašou úlohou je náhodne vybrať jedno heslo. Pri každom znovunačítaní stránky sa do konzole vypíše jedno z troch hesiel (náhodne).
 */
@@ -397,6 +403,7 @@ console.log(passwords[index])
 	// console.log(myArray)
 
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 18:", "color: red; font-weight: bold")
 /**
 Vytvorte pole s názvom toDo a uložte do neho 4 úlohy, ktoré máte spraviť:
 - vyvenčiť psa
@@ -419,6 +426,7 @@ toDo.forEach(function (activity, index) {
 })
 
 //------------------------------------------------------------------------------------------
+console.log("%cÚloha 19:", "color: red; font-weight: bold")
 /**
 1) Vytvorte pole toDo s úlohami:
 	postrihať video
@@ -447,7 +455,57 @@ for (let index = 0; index < numbers.length; index++) {
 	console.log(numbers[index])	
 }
 
+//------------------------------------------------------------------------------------------
+console.log("%cÚloha 20:", "color: red; font-weight: bold")
+/**
+Pomocou prompt() zadáte krstné meno podozrivého a do konzole sa vypíšu všetky jeho údaje. Každý údaj prehľadne na jeden riadok.
+Napr.:
+Meno: Jana
+Priezvisko: Ružová
+atď.
 
+Budete musieť nájsť objekt podľa mena a ten sa potom vypíšete. K nájdeniu objektu použite findIndex
+*/
 
+let criminals = [{
+	firstName: "Róbert",
+	secondName: "Fico",
+	birth: 1964,
+	address: "Sokolska",
+	city: "Bratislava"
+}, {
+	firstName: "Nórbert",
+	secondName: "Bödör",
+	birth: 1977,
+	address: "Mons. Bartosiewicza",
+	city: "Nitrianske Hrnčiarovce"
+}, {
+	firstName: "Tibor",
+	secondName: "Gašpar",
+	birth: 1962,
+	address: "Na Hôrke",
+	city: "Nitra"
+}]
+
+let suspect = prompt("Zadaj krstné meno podozrivého")
+
+let result = criminals.findIndex(function (oneSuspect) {
+	return oneSuspect.firstName === suspect
+})
+
+let ourSuspect = criminals[result]
+
+console.log(`Podozrivý:
+	Meno: ${ourSuspect.firstName}
+	Priezvisko: ${ourSuspect.secondName}
+	Rok narodenia: ${ourSuspect.birth}
+	Adresa: ${ourSuspect.address}
+	Mesto: ${ourSuspect.city}
+`)
+
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
