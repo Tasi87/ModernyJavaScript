@@ -642,7 +642,7 @@
 	} else {
 		console.log("Užívateľ sa našiel")
 	}
-
+	// alebo
 	if(employees2.indexOf("Tasi") != -1) {
 		console.log("Užívateľ nebol nájdený")
 	} else {
@@ -650,9 +650,44 @@
 	}
 
 //------------------------------------------------------------------------------------
-	console.log("%c:", "color: red; font-weight: bold")
+	console.log("%cPole objektov a metóda indexOf:", "color: red; font-weight: bold")
+	// Pole objektov a metóda indexOf
 
+	let books = [{
 
+	}, {
+		title: "Harry Potter a kameň mudrcov",
+		author: "J. K. Rowlingová",
+		published: 1997
+	}, {
+		title: "Harry Potter a Tajomná komnata",
+		author: "J. K. Rowlingová",
+		published: 1998
+	}, {
+		title: "Harry Potter a vezeň z Azkabanu",
+		author: "J. K. Rowlingová",
+		published: 1999
+	}]
+
+	// console.log(books[0].title)
+	// console.log(books[0].author)
+	// console.log(books[0].published)
+
+	console.log(books.indexOf({}))
+	//! Pokiaľ je v Poli prázdny objekt a hľadáme cez indexOf prázdny objekt, tak to nebude fungovať, pretože prázdny objekt v poli nie je rovnocenný s hľadaným prázdnym objektom cez indexOf! IndexOf odkazuje na iné miesta v pamäti!
+	
+	let data1 = {
+		title: "Harry Potter a kameň mudrcov",
+		author: "J. K. Rowlingová",
+		published: 1997
+	}
+
+	let data2 = data1
+
+	data2.title = "Nový title"
+	console.log(data1)
+	console.log(data2)
+	//! Keď data1 alebo data2 prepíšu nejakú hodnotu v objekte tak sa zobrazí prepísaná hodnota v oboch, pokiaľ sú navzájom prepojené ako v tomto prípade.
 
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
