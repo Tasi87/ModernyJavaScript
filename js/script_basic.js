@@ -781,17 +781,56 @@
 	})
 
 //------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
-//------------------------------------------------------------------------------------
+	console.log("%cPolie objektov a usporiadanie:", "color: red; font-weight: bold")
+	let books1 = [{
+		title: "Harry Potter a kameň mudrcov",
+		author: "J. K. Rowlingová",
+		published: 1997
+	}, {
+		title: "Harry Potter a vezeň z Azkabanu",
+		author: "J. K. Rowlingová",
+		published: 1999
+	}, {
+		title: "Harry Potter a Tajomná komnata",
+		author: "J. K. Rowlingová",
+		published: 1998
+	}]
+	
+	// Usporiadanie bežného poľa
+	let names1 = ["Anna", "Cecília", "Barbora"]
+	names1.sort()
+	console.log(names1)
+	
+	let numbers = [1, 8, 3, 2, 15, 5]
+	numbers.sort()
+	console.log(numbers)
+	//note správne usporiadanie čísel
+	let shortNumbers = function (arrayNumbers) {
+		arrayNumbers.sort(function (a, b) {
+			if (a < b) {
+				return -1
+			} else if (b < a) {
+				return 1
+			} else {
+				return 0
+			}
+		})
+	}
+	shortNumbers(numbers)
+	console.log(numbers)
+	
+	// Polie objektov a usporiadanie
+	let sortsArray = function (arrayBooks) {
+		arrayBooks.sort(function (a, b) {
+			if (a.title.toLowerCase() < b.title.toLowerCase()) {
+				return -1
+			} else if (b.title.toLowerCase() < a.title.toLowerCase()) {
+				return 1
+			} else {
+				return 0
+			}
+		})
+	}
 
+	sortsArray(books1)
+	console.log(books1)
