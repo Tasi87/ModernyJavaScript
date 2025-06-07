@@ -3,12 +3,14 @@
 	// querySelector
 	//note keď chcem pomocou JS vybrať jednotlivý element
 	//! vždy vyberie IBA PRVÚ možnosť
+	//! pokiaľ vyberám pomocou "id" tak musím zadať "#názov IDčka"
 	const paragraph = document.querySelector("p")
 	console.log(paragraph)
 	
 	// querySelectorAll
 	//note pracuje sa s ním ako s poliami
 	//! vyberie všetky prvky
+	//! pokiaľ vyberám pomocou "class" tak musím zadať ".názov class"
 	let allParagraphs = document.querySelectorAll("p")
 	console.log(allParagraphs)
 	// console.log(allParagraphs[0])
@@ -30,7 +32,7 @@
 	console.log("%cVyberanie elementov pomocou JavaScriptu:", "color: red; font-weight: bold")
 
 
-	
+
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
