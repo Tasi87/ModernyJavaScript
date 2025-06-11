@@ -1,0 +1,40 @@
+body {
+	background: linear-gradient(teal, darkviolet);
+	height: 100vh;
+}
+
+h1 {
+	color: #bada55;
+	text-align: center;
+}
+
+h2 {
+	color: aquamarine;
+}
+
+p {
+	color: azure;
+}
+
+li {
+	color: yellow;
+}
+
+.myBtn {
+	text-decoration: none;
+	font-size: 25px;
+
+	border: 2px solid black;
+	color: #fff;
+	background-color: blue;
+
+	padding: 10px 15px;
+	border-radius: 15px;
+	cursor: pointer;
+	letter-spacing: .15rem;
+}
+
+.myBtn:hover,
+.myBtn:focus {
+	background-color: rgb(25, 46, 165)
+}

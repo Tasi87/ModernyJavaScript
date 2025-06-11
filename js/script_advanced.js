@@ -1,4 +1,4 @@
-	console.log("%cVyberanie elementov pomocou JavaScriptu:", "color: red; font-weight: bold")
+	console.log("%c Vyberanie elementov pomocou JavaScriptu:", "color: red; font-weight: bold")
 	
 	// querySelector
 	//note keď chcem pomocou JS vybrať jednotlivý element
@@ -29,7 +29,7 @@
 	// console.log(myClass[1])
 	
 //------------------------------------------------------------------------------------
-	console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
 	
 	// textContent
 	//note vypíše text v elemente
@@ -111,14 +111,15 @@
 	secPara.prepend(newSpan)
 
 //------------------------------------------------------------------------------------
-	console.log("%cZachytávanie akcií:", "color: red; font-weight: bold")
+	// console.log("%c Zachytávanie akcií:", "color: red; font-weight: bold")
 	
+	// Zachytávanie akcií
 	// EventListener
 	document.querySelector("a").addEventListener("click", function (event) {
 		//note Tejto funkcií sa hovorí "call back function", to znamená, že sa spustí po tom, čo sa spustí iná funkcia.
 
 		//idea Viem si vybrať, čo sa má stať napr.:
-			//console.log(event.target)
+			// console.log(event.target)
 		//idea Toto zmení text v tlačítku.:
 			// event.target.textContent = "Test"
 
@@ -130,25 +131,35 @@
 	
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	console.log("%c Zachytávanie textu v poli:", "color: red; font-weight: bold")
+	
+	// Zachytávanie textu v poli
+	
+	//Variables
+	let input = document.querySelector("#input-txt")
+	//note v Listenery "change" sleduje zmenu po kliknutí inam, ale "input" vypisuje KAŽDÚ JEDNU ZMENU pri písaní
+	input.addEventListener("input", function (event) {
+		//note Toto mi vyberie text, ktorý bol napísaný do inputu.
+		console.log(event.target.value)
+	})
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	// console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	// console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	// console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	// console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	// console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	// console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	// console.log("%c Práca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")

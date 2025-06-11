@@ -55,3 +55,26 @@ for (let i = 0; i < myToDos.length; i++) {
 // 			document.querySelector("ul").appendChild(newLi)	
 // 		}
 // }
+
+//---------------------------------------------------------------------------
+
+document.querySelector(".myBtn").addEventListener("click", function (event) {
+	event.target.textContent = "test"
+})
+
+//---------------------------------------------------------------------------
+
+// Variables
+let btn1 = document.querySelector(".first-btn")
+let btn2 = document.querySelector(".second-btn")
+
+// Listeners
+btn1.addEventListener("click", function () {
+	console.log(`Kliknutie na "Prvé tlačítko"`)
+});
+btn2.addEventListener("click", function () {
+	console.log(`Kliknutie na "Druhé tlačítko"`)
+})
+
+//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
