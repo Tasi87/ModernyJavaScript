@@ -51,7 +51,8 @@
 	console.log(head.innerHTML)
 	
 //------------------------------------------------------------------------------------
-	console.log("%cPrechádzanie polí odstavcov '<p></p>' pomocou 'forEach':", "color: red; font-weight: bold")
+	
+	//Prechádzanie polí odstavcov "<p></p>" pomocou "forEach"
 	
 	let para = document.querySelectorAll("p")
 	// para.forEach(function(onePara) {
@@ -63,7 +64,8 @@
 	});
 
 //------------------------------------------------------------------------------------
-	console.log("%cOdstraňovanie prvkov podľa obsahu:", "color: red; font-weight: bold")
+	
+	// Odstraňovanie prvkov podľa obsahu
 
  	let zoznam = document.querySelectorAll(".zoznam")
 	zoznam.forEach(oneZoznam => {
@@ -83,7 +85,8 @@
 	});
 
 //------------------------------------------------------------------------------------
-	console.log("%cVytváranie nového HTML elementu a jeho pridanie do stránky:", "color: red; font-weight: bold")
+	
+	// Vytváranie nového HTML elementu a jeho pridanie do stránky
 
 	const newPara = document.createElement("p")
 	newPara.textContent = "Text do nového odstavca."
@@ -108,7 +111,23 @@
 	secPara.prepend(newSpan)
 
 //------------------------------------------------------------------------------------
-	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")
+	console.log("%cZachytávanie akcií:", "color: red; font-weight: bold")
+	
+	// EventListener
+	document.querySelector("a").addEventListener("click", function (event) {
+		//note Tejto funkcií sa hovorí "call back function", to znamená, že sa spustí po tom, čo sa spustí iná funkcia.
+
+		//idea Viem si vybrať, čo sa má stať napr.:
+			//console.log(event.target)
+		//idea Toto zmení text v tlačítku.:
+			// event.target.textContent = "Test"
+
+		//idea Vytvorenie napr.: h3
+			// let head2 = document.createElement("h3")
+			// head2.textContent = "Test"
+			// document.querySelector("main").appendChild(head2)
+	})
+	
 
 //------------------------------------------------------------------------------------
 	// console.log("%cPráca s textom pomocou JavaScriptu:", "color: red; font-weight: bold")

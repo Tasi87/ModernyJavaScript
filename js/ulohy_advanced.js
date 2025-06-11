@@ -1,4 +1,4 @@
-console.log("%cÚloha 1:", "color: red; font-weight: bold")
+console.log("%c Úloha 1:", "color: red; font-weight: bold")
 /**
 1) Vyberte pomocou querySelectoru nadpis h1 a vypíšte ho do konzoly
 
@@ -43,13 +43,44 @@ const paraId = document.getElementById("test2")
 // console.log(paraId)
 
 //------------------------------------------------------------------------------------
-console.log("%cÚloha 21:", "color: red; font-weight: bold")
+console.log("%c Úloha 2:", "color: red; font-weight: bold")
+/**
+V html vytvorte nadpisy h1, h2, h3. Vo všetkých bude ľubovolný text. U všetkých nadpisov nastavte, že po kliknutí na nadpis sa zmení text na "Klikni na nadpis nižšie". Výsledok bude, že keď kliknete na nadpis h1, tak sa zmení na "Klikni na nadpis nižšie". Po kliknutí na nadpis nižšie sa znova nadpis zmení na "Klikni na nadpis nižšie" atď.
+*/
+
+// Vytvorenie h elementov
+const creatH1 = document.createElement("h1")
+creatH1.textContent = "Sem KLIKNI!"
+document.querySelector("section").appendChild(creatH1)
+
+const creatH2 = document.createElement("h2")
+creatH2.textContent = "Sem KLIKNI!"
+document.querySelector("section").appendChild(creatH2)
+
+const creatH3 = document.createElement("h3")
+creatH3.textContent = "Sem KLIKNI!"
+document.querySelector("section").appendChild(creatH3)
+
+// Funkcia na kliknutie (call back function)
+
+document.querySelector("section").querySelector("h1").addEventListener("click", function (event) {
+	event.target.textContent = "Klikni na nadpis nižšie"
+})
+
+document.querySelector("section").querySelector("h2").addEventListener("click", function (event) {
+	event.target.textContent = "Klikni na nadpis nižšie"
+})
+
+document.querySelector("section").querySelector("h3").addEventListener("click", function (event) {
+	event.target.textContent = "Klikni na nadpis nižšie"
+})
+
 
 //------------------------------------------------------------------------------------
-console.log("%cÚloha 21:", "color: red; font-weight: bold")
+console.log("%c Úloha 21:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
-console.log("%cÚloha 21:", "color: red; font-weight: bold")
+console.log("%c Úloha 21:", "color: red; font-weight: bold")
 
 //------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------
