@@ -15,18 +15,18 @@ let myToDos = [{
 	completion: false,
 }]
 
-let toDoLeft = myToDos.filter(function (oneTodo) {
-	return !oneTodo.completion
-	//note "return oneTodo.completion" vracia vždy keď je hodnota "true"
-	// "return oneTodo.completion" = "return oneTodo.completion === true"
-	//idea "return !oneTodo.completion" vráti prevrátenú hodnotu, takže "false"
-	//	"return !oneTodo.completion" = "return oneTodo.completion === false"
-})
+// let toDoLeft = myToDos.filter(function (oneTodo) {
+// 	return !oneTodo.completion
+// 	//note "return oneTodo.completion" vracia vždy keď je hodnota "true"
+// 	// "return oneTodo.completion" = "return oneTodo.completion === true"
+// 	//idea "return !oneTodo.completion" vráti prevrátenú hodnotu, takže "false"
+// 	//	"return !oneTodo.completion" = "return oneTodo.completion === false"
+// })
 
-const newPara = document.createElement("p")
-document.querySelector("main").appendChild(newPara)
-newPara.textContent = "Ešte mi zostáva/jú " + toDoLeft.length + " úlohy!"
-//idea newPara.textContent = `Ešte mi zostáva/jú ${toDoLeft.length} úlohy!`
+// const newPara = document.createElement("p")
+// document.querySelector("main").appendChild(newPara)
+// newPara.textContent = "Ešte mi zostáva/jú " + toDoLeft.length + " úlohy!"
+// //idea newPara.textContent = `Ešte mi zostáva/jú ${toDoLeft.length} úlohy!`
 
 /**
 Vypísať všetky úlohy do zoznamu na stránke
@@ -101,6 +101,22 @@ let renderToDos = function (ourToDos, weSearching) {
 	//! "myToDos" je pole objektov, pôjde namiesto "ourToDos"
 	 //! za "weSearching" sa dosadí "filters"
 	})
+	
+//idea Vypisovanie úloh do stránky
+	// Prečistí aby nevytváralo neustále nový "para"
+	document.querySelector("#toDosLeft").innerHTML = ""
+
+	// funkcia na vyfiltrovanie a vypísanie zostávajúcich úloh po vyfiltrovaní
+	let leftToDos = ourResults.filter(function (oneToDo) {
+		return !oneToDo.completion
+	})
+
+	// vytvorenie nového paragrafu s počtom úloh, ktoré ešte zostávajú po vyfiltrovnaí
+	let para = document.createElement("p")
+	para.textContent = `Ešte zostáva úloh: ${leftToDos.length}`
+	document.querySelector("#toDosLeft").appendChild(para)
+
+
 	// console.log(ourResults)
 
 	//note Vymazanie elementov, pre znovuvytvorenie
@@ -139,6 +155,9 @@ searchText.addEventListener("input", function (event) {
 })
 
 //---------------------------------------------------------------------------
+
+
+
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
