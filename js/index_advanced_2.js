@@ -11,7 +11,7 @@ document.querySelector("#test-form").addEventListener("submit", function (event)
 	let para = document.createElement("p")
 	para.textContent = event.target.elements.firstName.value
 
-	document.querySelector("#from_form").appendChild(para)
+	document.querySelector("#from-form").appendChild(para)
 
 	// Vymazanie obsahu inputu po odoslaní
 	event.target.elements.firstName.value = ""
