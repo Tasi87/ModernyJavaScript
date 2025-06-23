@@ -56,6 +56,41 @@
 	})
 
 //-------------------------------------------------------------------------------------------
+
+// Roletka a práca s hodnotami (select, option, change)
+
+// variables
+let mySelect = document.querySelector("#my-select")
+// console.log(mySelect)
+
+mySelect.addEventListener("change", function (event) {
+	console.log(event.target.value) 	// "event.target.value" je kde to v konzole nájdem
+	
+})
+
+//-------------------------------------------------------------------------------------------
+console.log("%c Ďaľšie udalosti: mouseenter, mouseleave, keyup, keydown, keypress:", "color: red; font-weight: bold")
+
+	// Ďaľšie udalosti: mouseenter, mouseleave, keyup, keydown, keypress
+
+	// variables
+	let btn = document.querySelector("button")
+	// console.log(btn)
+	btn.addEventListener(/**"mouseenter"*/"mouseleave" , function (event) {
+		console.log("test")
+	})
+
+	document.querySelector("body").addEventListener(/**"keydown", "keypress"*/"keyup", function (event) {
+		console.log(event.key) // "event" vypisuje viacinfo, "event.key" vypisuje iba danú klávesu
+	})
+
+//-------------------------------------------------------------------------------------------
+
+	// Menenie CSS pomocou JS
+
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------
