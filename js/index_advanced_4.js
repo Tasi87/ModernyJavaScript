@@ -41,7 +41,7 @@ let myBody = document.querySelector("body")
 // MAIN CODE
 	myForm.addEventListener("submit", function (e) {
 		e.preventDefault()
-		
+		// variables
 		let inputColor = e.target.elements.color.value
 		myBody.style.backgroundColor = inputColor
 
