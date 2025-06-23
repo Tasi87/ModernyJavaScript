@@ -31,3 +31,19 @@ document.addEventListener("keyup", function (event) {
 // heading.style.fontSize = "2.5rem"
 	// heading.style.display = "none"
 	// heading.style.fontWeight = "400"
+
+//---------------------------------------------------
+
+// VARIABLES
+let myForm = document.querySelector("#my-form")
+let myBody = document.querySelector("body")
+
+// MAIN CODE
+	myForm.addEventListener("submit", function (e) {
+		e.preventDefault()
+		
+		let inputColor = e.target.elements.color.value
+		myBody.style.backgroundColor = inputColor
+
+		e.target.elements.color.value = ""
+	})
