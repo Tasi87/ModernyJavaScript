@@ -1,6 +1,12 @@
 let heading = document.querySelector("h1")
 // console.log(heading)
 
+//note pre zistenie vlastností CSS
+let style = getComputedStyle(heading)
+console.log(style.color)	// zobrazuje v rgb spektre
+console.log(style.backgroundColor)
+// console.log(style)
+
 // zmena farby priprejdený kurzorom
 heading.addEventListener("mouseenter", function (event) {
 	heading.style.color = "blue"
@@ -22,6 +28,6 @@ document.addEventListener("keyup", function (event) {
 })
 
 // ďaľšie štýly
-	// heading.style.fontSize = "2.5rem"
+// heading.style.fontSize = "2.5rem"
 	// heading.style.display = "none"
 	// heading.style.fontWeight = "400"
