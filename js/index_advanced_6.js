@@ -20,23 +20,40 @@
 
 //------------------------------------------------------------------------------------------
 
-let user = {
-	firstName: "Laura",
-	age: 27
-}
-//note toto spraví z objektu string
-let userJSON = JSON.stringify(user)
-// console.log(userJSON)
-localStorage.setItem("user", userJSON)
+// let user = {
+// 	firstName: "Laura",
+// 	age: 27
+// }
+// //note toto spraví z objektu string
+// let userJSON = JSON.stringify(user)
+// // console.log(userJSON)
+// localStorage.setItem("user", userJSON)
 
-let userFromLS = localStorage.getItem("user")
-//note toto zmení string na normálny objekt kde text je streing a číslo je number
-let myUser = JSON.parse(userFromLS)
-// console.log(myUser)
+// let userFromLS = localStorage.getItem("user")
+// //note toto zmení string na normálny objekt kde text je streing a číslo je number
+// let myUser = JSON.parse(userFromLS)
+// // console.log(myUser)
 
-console.log(`Ahoj, ja som ${myUser.firstName} a mám ${myUser.age} rokov.`)
+// console.log(`Ahoj, ja som ${myUser.firstName} a mám ${myUser.age} rokov.`)
 
 //------------------------------------------------------------------------------------------
+
+let myArray = []
+
+let myForm = document.querySelector("#test-form")
+myForm.addEventListener("submit", function (e) {
+	e.preventDefault()
+
+	//note to, čo napíšem do inputu sa uloží do poľa "myArray"
+	myArray.push (e.target.elements.firstName.value)
+	myArrayToLS = JSON.stringify(myArray)
+	localStorage.setItem("users", myArrayToLS)
+	
+	//note vymaže input po odoslaní formuláru
+	e.target.elements.firstName.value = ""
+
+})
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
