@@ -52,6 +52,18 @@ myForm.addEventListener("submit", function (e) {
 	//note vymaže input po odoslaní formuláru
 	e.target.elements.firstName.value = ""
 
+	//note funkcia na získavanie "user" z localStorage
+	let myArrayFromLS = localStorage.getItem("users")
+	//note funkcia na "prejdenie cez vrátnicu dát" localStoragu
+	let myArrayFromLSj = JSON.parse(myArrayFromLS)
+
+	//note funkcia na vytvorenie "<p></p>" v html
+	let paragraph = document.createElement("p")
+	//note vybratie posledného objektu
+	paragraph.textContent = myArrayFromLSj[myArrayFromLSj.length - 1]
+	//note vloženie "<p></p>" na konkrétne miesto pomocou "id"
+	document.querySelector("#my-users").appendChild(paragraph)
+
 })
 
 //------------------------------------------------------------------------------------------
