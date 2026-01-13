@@ -27,10 +27,11 @@
 // //note toto spraví z objektu string
 // let userJSON = JSON.stringify(user)
 // // console.log(userJSON)
+// //note nastavenie položky "user"
 // localStorage.setItem("user", userJSON)
 
 // let userFromLS = localStorage.getItem("user")
-// //note toto zmení string na normálny objekt kde text je streing a číslo je number
+// //note toto zmení string na normálny objekt kde text je string a číslo je number
 // let myUser = JSON.parse(userFromLS)
 // // console.log(myUser)
 
