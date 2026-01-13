@@ -47,7 +47,10 @@ myForm.addEventListener("submit", function (e) {
 
 	//note to, čo napíšem do inputu sa uloží do poľa "myArray"
 	myArray.push (e.target.elements.firstName.value)
+	// prevedenie všetkého na stringy, čo chcem uložiť do úložiska "myArray"
 	myArrayToLS = JSON.stringify(myArray)
+	// uloženie do úložiska "myArray", 
+	// pričom vytvorí pole "user" a priďaľšom vkladaní upraví pole "user"
 	localStorage.setItem("users", myArrayToLS)
 	
 	//note vymaže input po odoslaní formuláru
