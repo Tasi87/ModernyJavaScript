@@ -105,6 +105,7 @@ if(localStorage.getItem("criminals") == null){
 	myArray = JSON.parse(localStorage.getItem("criminals"))
 }
 
+// odoslanie formuláru
 myForm.addEventListener("submit", function (e) {
 	e.preventDefault()
 
@@ -115,9 +116,38 @@ myForm.addEventListener("submit", function (e) {
 		secondName: e.target.elements.secondName.value,
 		crime: e.target.elements.crime.value,
 	})
+	
+	e.target.elements.firstName.value = ""
+	e.target.elements.secondName.value = ""
+	e.target.elements.crime.value = ""
 
 	myArrayJSON = JSON.stringify(myArray)
 	localStorage.setItem("criminals", myArrayJSON)
+
+})
+
+// vypisovanie späť do stránky
+let toList = document.querySelector(".to-list")
+toList.addEventListener("click", function () {
+	
+	let myStorage = localStorage.getItem("criminals")	
+	let myStorageJSON = JSON.parse(myStorage)
+	
+	//note premazanie vypísaného zoznamu
+	document.querySelector(".list-criminals").innerHTML = ""
+
+	myStorageJSON.forEach(oneCriminal => {
+		let paragraph = document.createElement("p")
+
+		paragraph.innerHTML = 
+		`
+		Meno: ${oneCriminal.firstName}, <br>
+		Priezvisko: ${oneCriminal.secondName}, <br>
+		Zločin: ${oneCriminal.crime} <br>
+		`
+
+		document.querySelector(".list-criminals").appendChild(paragraph)
+	});
 
 })
 
