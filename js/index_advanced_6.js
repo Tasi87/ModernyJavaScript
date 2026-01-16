@@ -39,63 +39,88 @@
 
 //------------------------------------------------------------------------------------------
 
-//note zabezpečí aby pri ďaľšom načítaní sa opätovne nemazalo a nevytváralo nové pole
-if(localStorage.getItem("users") == null) {
-	var myArray = [] //! !!!let by nefungovalo, ale var funguje!!!
-} else {
-	// vytiahne "users" a rovno to pridá k existujúcim "users"
-	myArray = JSON.parse(localStorage.getItem("users"))
-}
+// //note zabezpečí aby pri ďaľšom načítaní sa opätovne nemazalo a nevytváralo nové pole
+// if(localStorage.getItem("users") == null) {
+// 	var myArray = [] //! !!!let by nefungovalo, ale var funguje!!!
+// } else {
+// 	// vytiahne "users" a rovno to pridá k existujúcim "users"
+// 	myArray = JSON.parse(localStorage.getItem("users"))
+// }
 
-	//! !!!FUNGUJE PRI ODOSLANÍ FORMULÁRU!!!
-	let myForm = document.querySelector("#test-form")
-	myForm.addEventListener("submit", function (e) {
-		e.preventDefault()
+// 	//! !!!FUNGUJE PRI ODOSLANÍ FORMULÁRU!!!
+// 	let myForm = document.querySelector("#test-form")
+// 	myForm.addEventListener("submit", function (e) {
+// 		e.preventDefault()
 
-		//note to, čo napíšem do inputu sa uloží do poľa "myArray"
-		myArray.push (e.target.elements.firstName.value)
-		// prevedenie všetkého na stringy, čo chcem uložiť do úložiska "myArray"
-		myArrayToLS = JSON.stringify(myArray)
-		// uloženie do úložiska "myArray", 
-		// pričom vytvorí pole "user" a priďaľšom vkladaní upraví pole "user"
-		localStorage.setItem("users", myArrayToLS)
+// 		//note to, čo napíšem do inputu sa uloží do poľa "myArray"
+// 		myArray.push (e.target.elements.firstName.value)
+// 		// prevedenie všetkého na stringy, čo chcem uložiť do úložiska "myArray"
+// 		myArrayToLS = JSON.stringify(myArray)
+// 		// uloženie do úložiska "myArray", 
+// 		// pričom vytvorí pole "user" a priďaľšom vkladaní upraví pole "user"
+// 		localStorage.setItem("users", myArrayToLS)
 		
-		//note vymaže input po odoslaní formuláru
-		e.target.elements.firstName.value = ""
+// 		//note vymaže input po odoslaní formuláru
+// 		e.target.elements.firstName.value = ""
 
-		//note funkcia na získavanie "user" z localStorage
-		let myArrayFromLS = localStorage.getItem("users")
-		//note funkcia na "prejdenie cez vrátnicu dát" localStoragu
-		let myArrayFromLSj = JSON.parse(myArrayFromLS)
+// 		//note funkcia na získavanie "user" z localStorage
+// 		let myArrayFromLS = localStorage.getItem("users")
+// 		//note funkcia na "prejdenie cez vrátnicu dát" localStoragu
+// 		let myArrayFromLSj = JSON.parse(myArrayFromLS)
 		
-		//note funkcia na vytvorenie "<p></p>" v html
-		let paragraph = document.createElement("p")
-		//note vybratie posledného objektu
-		paragraph.textContent = myArrayFromLSj[myArrayFromLSj.length - 1]
-		//note vloženie "<p></p>" na konkrétne miesto pomocou "id"
-		document.querySelector("#my-users").appendChild(paragraph)
+// 		//note funkcia na vytvorenie "<p></p>" v html
+// 		let paragraph = document.createElement("p")
+// 		//note vybratie posledného objektu
+// 		paragraph.textContent = myArrayFromLSj[myArrayFromLSj.length - 1]
+// 		//note vloženie "<p></p>" na konkrétne miesto pomocou "id"
+// 		document.querySelector("#my-users").appendChild(paragraph)
 		
-	})
+// 	})
 
-	//! !!!funguje bez ohľadu na odoslanie formuláru!!!
-	//note načítanie "users" z "localStarage"
-	let myPresentArray = localStorage.getItem("users")
-	//note funkcia na "prejdenie cez vrátnicu dát" localStoragu
-	let myPresentArrayJ = JSON.parse(myPresentArray)
+// 	//! !!!funguje bez ohľadu na odoslanie formuláru!!!
+// 	//note načítanie "users" z "localStarage"
+// 	let myPresentArray = localStorage.getItem("users")
+// 	//note funkcia na "prejdenie cez vrátnicu dát" localStoragu
+// 	let myPresentArrayJ = JSON.parse(myPresentArray)
 
-	if (myPresentArrayJ !== null) {
-		//note cyklus "forEach" s funkciou na ukladanie do "oneUser"
-		myPresentArrayJ.forEach(function (oneUser) {
-			// vytvorenie "<p></p>" v html
-			let paragraph = document.createElement("p")
-			// uloženie toho "oneUser"
-			paragraph.textContent = oneUser
-			// chytíme "<div></div>" do ktorého chcem ten paragraph vytvoriť
-			document.querySelector("#my-users").appendChild(paragraph)
-		})
-	}
+// 	if (myPresentArrayJ !== null) {
+// 		//note cyklus "forEach" s funkciou na ukladanie do "oneUser"
+// 		myPresentArrayJ.forEach(function (oneUser) {
+// 			// vytvorenie "<p></p>" v html
+// 			let paragraph = document.createElement("p")
+// 			// uloženie toho "oneUser"
+// 			paragraph.textContent = oneUser
+// 			// chytíme "<div></div>" do ktorého chcem ten paragraph vytvoriť
+// 			document.querySelector("#my-users").appendChild(paragraph)
+// 		})
+// 	}
 
 //------------------------------------------------------------------------------------------
+
+let myForm = document.querySelector("#test-form")
+
+if(localStorage.getItem("criminals") == null){
+	var myArray = []
+} else {
+	myArray = JSON.parse(localStorage.getItem("criminals"))
+}
+
+myForm.addEventListener("submit", function (e) {
+	e.preventDefault()
+
+	//note ".push" znamená, že to dá na koniec poľa
+	myArray.push({
+		id: "",
+		firstName: e.target.elements.firstName.value,
+		secondName: e.target.elements.secondName.value,
+		crime: e.target.elements.crime.value,
+	})
+
+	myArrayJSON = JSON.stringify(myArray)
+	localStorage.setItem("criminals", myArrayJSON)
+
+})
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
