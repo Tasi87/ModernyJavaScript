@@ -140,11 +140,14 @@ toList.addEventListener("click", function () {
 		let paragraph = document.createElement("p")
 
 		paragraph.innerHTML = 
-		`
-		Meno: ${oneCriminal.firstName}, <br>
-		Priezvisko: ${oneCriminal.secondName}, <br>
-		Zločin: ${oneCriminal.crime} <br>
-		`
+			`
+			Meno: ${oneCriminal.firstName}, <br>
+			Priezvisko: ${oneCriminal.secondName}, <br>
+			Zločin: ${oneCriminal.crime} <br>
+			`
+		//note pridanie "class" k vznikajúcemu elementu
+		paragraph.classList.add("basic-styles")
+
 
 		document.querySelector(".list-criminals").appendChild(paragraph)
 	});
