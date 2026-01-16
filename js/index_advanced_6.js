@@ -163,6 +163,37 @@ toList.addEventListener("click", function () {
 	}
 })
 
+// filtrovanie
+let nameFilter = document.querySelector(".name-filter")
+let myStorage = localStorage.getItem("criminals")
+let myStorageJSON = JSON.parse(myStorage)
+
+//note keď sa začne vpisovať do "input" začne sa spúšťať funkcia
+nameFilter.addEventListener("input", function (e) {
+	let whatWeSearch = e.target.value
+
+	let ourResults = myStorageJSON.filter(function (oneCriminal) {
+		return oneCriminal.firstName.toLowerCase().includes(whatWeSearch.toLowerCase())
+	})
+
+	document.querySelector(".filter-name").innerHTML = ""
+	document.querySelector(".list-criminals").innerHTML = ""
+
+	ourResults.forEach(function (oneCriminal) {
+		let paragraph = document.createElement("p")
+		paragraph.innerHTML = 
+		`
+			Meno: ${oneCriminal.firstName}, <br>
+			Priezvisko: ${oneCriminal.secondName}, <br>
+			Zločin: ${oneCriminal.crime} <br>
+		`
+
+		document.querySelector(".filter-name").appendChild(paragraph)
+		
+	})
+
+})
+
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
