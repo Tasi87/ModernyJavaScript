@@ -129,29 +129,38 @@ myForm.addEventListener("submit", function (e) {
 // vypisovanie späť do stránky
 let toList = document.querySelector(".to-list")
 toList.addEventListener("click", function () {
-	
-	let myStorage = localStorage.getItem("criminals")	
-	let myStorageJSON = JSON.parse(myStorage)
-	
-	//note premazanie vypísaného zoznamu
-	document.querySelector(".list-criminals").innerHTML = ""
 
-	myStorageJSON.forEach(oneCriminal => {
+	if(localStorage.getItem("criminals") == null ){
+		
 		let paragraph = document.createElement("p")
-
-		paragraph.innerHTML = 
-			`
-			Meno: ${oneCriminal.firstName}, <br>
-			Priezvisko: ${oneCriminal.secondName}, <br>
-			Zločin: ${oneCriminal.crime} <br>
-			`
-		//note pridanie "class" k vznikajúcemu elementu
-		paragraph.classList.add("basic-styles")
-
-
+		paragraph.textContent = "Databáza zločincov je prázdna."
 		document.querySelector(".list-criminals").appendChild(paragraph)
-	});
 
+	//note vypíše obsah local storage
+	} else {
+		
+		let myStorage = localStorage.getItem("criminals")	
+		let myStorageJSON = JSON.parse(myStorage)
+		
+		//note premazanie vypísaného zoznamu
+		document.querySelector(".list-criminals").innerHTML = ""
+	
+		myStorageJSON.forEach(oneCriminal => {
+			let paragraph = document.createElement("p")
+	
+			paragraph.innerHTML = 
+				`
+				Meno: ${oneCriminal.firstName}, <br>
+				Priezvisko: ${oneCriminal.secondName}, <br>
+				Zločin: ${oneCriminal.crime} <br>
+				`
+			//note pridanie "class" k vznikajúcemu elementu
+			paragraph.classList.add("basic-styles")
+	
+	
+			document.querySelector(".list-criminals").appendChild(paragraph)
+		});
+	}
 })
 
 //------------------------------------------------------------------------------------------
