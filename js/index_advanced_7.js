@@ -5,10 +5,12 @@ let myForm = document.querySelector("#test-form")
 	myForm.addEventListener("submit", function (event) {
 	event.preventDefault()
 
+		//note do poľa "names" pridá nakoniec to, čo sa bude písať do vstupu a pridá sa "id"
+		// konštanta prepojená s funkciou "getSavedNames"
 		names.push({
 			id: "",
 			firstName: event.target.elements.firstName.value
 		})
 
-		
+
 })
