@@ -43,8 +43,9 @@ const generateHTMLstructure = function (oneName) {
 	newDiv.appendChild(button)
 
 	button.addEventListener("click", function (event) {
-		removeNames(oneName.id)
+		removeNames(names, oneName.id)
 		saveNames(names)
+		toListAgain()
 
 	})
 
@@ -56,13 +57,29 @@ const generateHTMLstructure = function (oneName) {
 
 // Podľa ID nájde index daného mena a pomocou splice ho odstráni
 
-const removeNames = function (id) {
-	const index = names.findIndex(function (nameWantToCheck) {
+const removeNames = function (ourNames, id) {
+	const index = ourNames.findIndex(function (nameWantToCheck) {
 		return nameWantToCheck.id === id
 	})
 
 	if(index > -1) {
-		names.splice(index,1)
+		ourNames.splice(index,1)
 	}
+}
 
+/**
+	Pokiaľ vymažem nejaké meno z localStorage, 
+	tak táto funkcia zabezpečí oepätovné vypísanie localSotrage
+	(teda vypísanie bez vymazaného mena)
+*/
+
+const toListAgain = function () {
+	document.querySelector(".list-names").innerHTML = ""
+
+	let newData = getSavedNames()
+
+	newData.forEach(onlyOneName => {
+		const newContent = generateHTMLstructure(onlyOneName)
+		document.querySelector(".list-names").appendChild(newContent)
+	});
 }
