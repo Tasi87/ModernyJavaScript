@@ -69,3 +69,12 @@ input[type="submit"]:hover,
 	margin-left: 20px;
 	font-size: 25px;
 }
+
+.adult {
+	text-decoration: underline;
+	color: rgb(158, 0, 0);
+}
+
+.no-adult {
+	color: #046f04;
+}
