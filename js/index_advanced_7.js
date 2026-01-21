@@ -25,7 +25,9 @@ let myForm = document.querySelector("#test-form")
 // vypisovanie späť do schránky
 let btnToList = document.querySelector(".to-list")
 btnToList.addEventListener("click", function (event) {
-	
+	//note premaže vypísaný zoznam
+	document.querySelector(".list-names").innerHTML = ""
+
 	let namesFromStorage = localStorage.getItem("names")
 	let namesFromStorageJSON = JSON.parse(namesFromStorage)
 	

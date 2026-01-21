@@ -1,0 +1,71 @@
+body {
+	background: #07d0bf;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+input[type="text"] {
+	outline: none;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 25px;
+}
+
+input[type="submit"] {
+	font-size: 20px;
+	margin-top: 10px;
+	border-radius: 10px;
+	background: #3359d7;
+	color: white;
+	width: 100px;
+}
+
+input[type="submit"]:hover,
+.to-list:hover {
+	background: green;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px black;
+}
+
+.to-list {
+	display: block;
+	margin: 10px auto;
+	border-radius: 10px;
+	font-size: 20px;
+	background: #3359d7;
+	color: white;
+	width: 100px;
+}
+
+.list-names {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+	color: navy;
+}
+
+.list-names button {
+	background: red;
+	font-size: 18px;
+	color: white;
+	border-radius: 10px;
+	margin-top: 5px;
+	padding: 5px 10px;
+}
+
+.list-names button:hover {
+		background: rgb(186, 15, 15);
+		box-shadow: 2px 2px 5px black;
+}
+
+.list-names span {
+	margin-left: 20px;
+	font-size: 25px;
+}
