@@ -35,7 +35,7 @@ const saveNames = function (oneName) {
 
 const generateHTMLstructure = function (oneName) {
 	const newDiv 	= document.createElement("div")
-	const newSpan 	= document.createElement("span")
+	const newLink 	= document.createElement("a")
 	const button	= document.createElement("button")
 
 	// nastavenie mazacieho tlačítka
@@ -49,14 +49,14 @@ const generateHTMLstructure = function (oneName) {
 
 	})
 
-	newSpan.textContent = oneName.firstName
+	newLink.textContent = oneName.firstName
 	if(oneName.adult === true) {
-		newSpan.classList.add("adult")
+		newLink.classList.add("adult")
 	} else {
-		newSpan.classList.add("no-adult")
+		newLink.classList.add("no-adult")
 	}
 
-	newDiv.appendChild(newSpan)
+	newDiv.appendChild(newLink)
 
 	return newDiv
 }
