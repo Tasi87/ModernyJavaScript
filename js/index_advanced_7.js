@@ -35,8 +35,6 @@ btnToList.addEventListener("click", function (event) {
 
 	let namesFromStorage = localStorage.getItem("names")
 	let namesFromStorageJSON = JSON.parse(namesFromStorage)
-
-	console.log(namesFromStorageJSON)
 	
 	namesFromStorageJSON.forEach(function (myName) {
 		const oneNameHTML = generateHTMLstructure(myName)
