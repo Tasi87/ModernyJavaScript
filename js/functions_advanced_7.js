@@ -57,7 +57,7 @@ const generateHTMLstructure = function (oneName) {
 	}
 
 	// pri vytvorení každého linku pridá atribut "href" a aj cieľ kam má odkazovať.
-	newLink.setAttribute("href", "../index_advances_7_edit.html")
+	newLink.setAttribute("href", `../index_advances_7_edit.html#${oneName.id}`)
 
 	newDiv.appendChild(newLink)
 
@@ -65,7 +65,6 @@ const generateHTMLstructure = function (oneName) {
 }
 
 // Podľa ID nájde index daného mena a pomocou splice ho odstráni
-
 const removeNames = function (ourNames, id) {
 	const index = ourNames.findIndex(function (nameWantToCheck) {
 		return nameWantToCheck.id === id
