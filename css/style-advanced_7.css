@@ -71,9 +71,9 @@ input[type="submit"]:hover,
 }
 
 .adult {
-	color: rgb(158, 0, 0);
+	color: #046f04;
 }
 
 .no-adult {
-	color: #046f04;
+	color: rgb(158, 0, 0);
 }
