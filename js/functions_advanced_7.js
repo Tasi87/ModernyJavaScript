@@ -57,7 +57,7 @@ const generateHTMLstructure = function (oneName) {
 	}
 
 	// pri vytvorení každého linku pridá atribut "href" a aj cieľ kam má odkazovať.
-															// do domény vloží id daného mena
+															// do URL adresy vloží id daného mena
 	newLink.setAttribute("href", `../index_advances_7_edit.html#${oneName.id}`)
 
 	newDiv.appendChild(newLink)
