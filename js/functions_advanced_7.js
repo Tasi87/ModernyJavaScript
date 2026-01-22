@@ -56,6 +56,9 @@ const generateHTMLstructure = function (oneName) {
 		newLink.classList.add("no-adult")
 	}
 
+	// pri vytvorení každého linku pridá atribut "href" a aj cieľ kam má odkazovať.
+	newLink.setAttribute("href", "../index_advances_7_edit.html")
+
 	newDiv.appendChild(newLink)
 
 	return newDiv
