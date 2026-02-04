@@ -41,3 +41,8 @@ btnToList.addEventListener("click", function (event) {
 		document.querySelector(".list-names").appendChild(oneNameHTML)
 	})
 })
+
+// pri akejkoľvek zmene v localStorage sa hlavná stránka znovu načíta
+window.addEventListener("storage", function () {
+	this.location.reload()
+})
