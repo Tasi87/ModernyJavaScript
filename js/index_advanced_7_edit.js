@@ -31,3 +31,24 @@ changingForm.addEventListener("submit", function (event) {
 	saveNames(names)
 	
 })
+
+window.addEventListener("storage", function(event) {
+	console.log(event)
+	if(event.key === "names") {
+		//! !!!"names" NESMIE BYŤ "const", ale MUSÍ BYŤ "let"!!!
+		names = JSON.parse(event.newValue)
+	}
+	/**
+	Pre zjednodučenie ak sa nejaká časť kódu, ktorá niečo robí opakuje, tak sa z nej spraví
+	funkcia aby kód bol prehľadnejší.
+	*/
+					let searchedName = names.find(function(oneObject) {
+						return oneObject.id === nameID
+					}) 
+
+					if (searchedName === undefined) {
+							location.assign("../index_advances_7.html")
+					}
+
+					document.querySelector("#edited-name").value = searchedName.firstName
+})
