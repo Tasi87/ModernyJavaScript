@@ -32,9 +32,13 @@ console.log("Pokračujeme ďalej")
 //! "use strict"; sa píše na začiatok súboru!!!
 
 // global scope
+
+// let public = "test"
+
 const ourTest = () => {
 	// local scope
-	data = "abcdefg"
+	let data = "abcdefg"
+	 //data = "abcdefg"
 }
 
 ourTest()
