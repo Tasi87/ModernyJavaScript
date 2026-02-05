@@ -1,4 +1,5 @@
 //idea Šípková notácia
+//! !!! Šípková notácia NEVIE PRACOVAŤ S "arguments", treba použiť klasickú funkciu!!!
 
 //note 1. spôsob zápisu
 	// const square = function (num) {
@@ -64,4 +65,15 @@ console.log(less20)
 		pracujem so STRINGOM a podľa toho aj postupovať, string sa označuje ""
 	*/ 
 //---------------------------------------------------------------------------
+							
+const car = {
+	color: "modrá",
+	//! !!! Toto nefunguje !!!
+	// getInfo:  () => `Farba tohoto aute je ${this.color}`
+	getInfo:  function () {
+		return `Farba tohoto aute je ${this.color}`			
+	}
+}
+
+console.log(car.getInfo())
 //---------------------------------------------------------------------------
