@@ -1,3 +1,5 @@
+"use strict";
+
 const myTaxes = (income) => {
 	if (typeof income === "number") {
 		return income * 0.25
@@ -27,5 +29,13 @@ console.log("Pokračujeme ďalej")
 
 //------------------------------------------------------------------------
 // Strict mode
+//! "use strict"; sa píše na začiatok súboru!!!
 
+// global scope
+const ourTest = () => {
+	// local scope
+	data = "abcdefg"
+}
 
+ourTest()
+// console.log(data)
