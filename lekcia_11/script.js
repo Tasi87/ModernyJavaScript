@@ -12,5 +12,20 @@ try {
 } catch (e) {
 	console.log("Pozor, chyba!")
 }
+//------------------------------------------------------------------------
+
+localStorage.setItem("age", 30)
+let myAge = localStorage.getItem("age")
+
+try {
+	console.log(JSON.parse(myAge))
+} catch (error) {
+	console.log("CHYBA!!!")
+}
+
+console.log("Pokračujeme ďalej")
+
+//------------------------------------------------------------------------
+// Strict mode
 
 
