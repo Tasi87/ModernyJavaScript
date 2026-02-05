@@ -45,4 +45,4 @@ btnToList.addEventListener("click", function (event) {
 // pri akejkoľvek zmene v localStorage sa hlavná stránka znovu načíta
 window.addEventListener("storage", function () {
 	this.location.reload()
-})
+}) 
