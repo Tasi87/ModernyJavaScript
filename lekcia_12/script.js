@@ -1,3 +1,4 @@
+"use strict"
 //idea	Najčastejšie opakované cykly
 //------------------------------------------------------------------------------------------
 //note	forEach - prechádza polia
@@ -22,3 +23,9 @@ let i = 20
 // cyklus do //! !!!PREBEHNE URČITE ASPOŇ RAZ!!!
 // podmienka while //! !!!PREBEHNE IBA AK JE PODMIENKA SPLNENÁ!!!
 //------------------------------------------------------------------------------------------
+
+// let result
+// while (result != "x") {
+// 	result = prompt("Pokiaľ chceš ukončiť hru, tak zadaj X")
+// 	console.log(result)
+// }
